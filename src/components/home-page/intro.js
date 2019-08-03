@@ -2,12 +2,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import bg from '../../content/assets/bg-faded.jpg';
-
-const Section = styled.section`
-  font-family: TrajanPro, Georgia, 'Times New Roman', Times, serif;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-  text-transform: uppercase;
-`;
+import { px2rem } from '../../utils/styles';
 
 const borderBehindText = css`
   display: table;
@@ -31,6 +26,12 @@ const borderBehindText = css`
   }
 `;
 
+const Section = styled.section`
+  font-family: TrajanPro, Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  text-transform: uppercase;
+`;
+
 const Masthead = styled.header`
   position: relative;
   z-index: 1;
@@ -46,8 +47,7 @@ const Heading = styled.h1`
   text-align: center;
   color: #fff;
   font-weight: normal;
-  font-size: 4.5rem;
-
+  font-size: ${px2rem(72)};
   ${borderBehindText};
 `;
 
@@ -55,7 +55,7 @@ const TagLine = styled.h2`
   margin: 0;
   text-align: center;
   color: #fff;
-  font-size: 2.5rem;
+  font-size: ${px2rem(40)};
   font-weight: normal;
   ${borderBehindText};
 `;
