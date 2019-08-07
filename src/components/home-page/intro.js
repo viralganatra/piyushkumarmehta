@@ -1,13 +1,15 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import bg from '../../content/assets/bg-faded.jpg';
+import MainImageLegacy from '../../content/assets/bg-faded.jpg';
+import MainImageModern from '../../content/assets/bg-faded.webp';
 import { px2rem } from '../../utils/styles';
 
 const borderBehindText = css`
   display: table;
   white-space: nowrap;
   overflow: hidden;
+  line-height: 1;
   width: 100%;
 
   &::before,
@@ -33,9 +35,8 @@ const Section = styled.section`
 `;
 
 const Masthead = styled.header`
-  position: relative;
   z-index: 1;
-  height: 100vh;
+  height: calc(100vh + var(--about-heading-offset));
   position: relative;
   width: 100%;
 `;
@@ -70,55 +71,57 @@ const HeroImage = styled.img`
   z-index: -1;
 `;
 
+const Navigation = styled.nav`
+  position: absolute;
+  top: 85px;
+  left: 0;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding: 20px;
+  }
+  li {
+    position: relative;
+    z-index: 2;
+
+    &:first-of-type {
+      margin-left: 50px;
+    }
+    &:last-of-type {
+      margin-right: 50px;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 24px;
+  }
+`;
+
 export default function HomePageIntro() {
   return (
     <Section>
       <Masthead>
         <picture>
+          <source srcSet={MainImageModern} type="image/webp" />
+          <source srcSet={MainImageLegacy} type="image/jpeg" />
           <HeroImage
-            src={bg}
-            alt="Piyushkumar Mehta - Modern Hindu Wedding Priest (Piyushbhai Mehta)"
+            src={MainImageLegacy}
+            alt="Piyushkumar Mehta - Modern Hindu Wedding Priest (Piyushbhai)"
           />
         </picture>
         <Heading>Piyushkumar Mehta</Heading>
         <TagLine>Hindu Wedding Priest</TagLine>
       </Masthead>
 
-      <nav
-        css={css`
-          position: absolute;
-          top: 95px;
-          left: 0;
-          width: 100%;
-        `}
-      >
-        <ul
-          css={css`
-            display: flex;
-            justify-content: space-between;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            padding: 20px;
-
-            a {
-              color: white;
-              text-decoration: none;
-              padding: 20px;
-              font-size: 24px;
-            }
-            li {
-              position: relative;
-              z-index: 2;
-            }
-            li:first-of-type {
-              margin-left: 50px;
-            }
-            li:last-of-type {
-              margin-right: 50px;
-            }
-          `}
-        >
+      <Navigation>
+        <ul>
           <li>
             <a href="#about">About</a>
           </li>
@@ -126,7 +129,7 @@ export default function HomePageIntro() {
             <a href="#contact">Contact</a>
           </li>
         </ul>
-      </nav>
+      </Navigation>
     </Section>
   );
 }
