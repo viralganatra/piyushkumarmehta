@@ -134,7 +134,7 @@ export default function HomePageAbout() {
           <Welcome>Jai Shree Krishna,</Welcome>
           <WelcomeText>
             I&apos;m Piyushbhai Mehta and I perform Hindu wedding ceremonies. I focus on
-            on creating a spiritual atmosphere through silent ceremonies whereby you can
+            creating a spiritual atmosphere through silent ceremonies whereby you can
             connect emotionally to God and your guests can observe and participate in your
             special day.
           </WelcomeText>
