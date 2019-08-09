@@ -14,16 +14,19 @@ export default function Layout({ children }) {
       <Global
         styles={css`
           :root {
+            --color-bg: #fff;
             --color-text: #505057;
+            --color-primary: #f2f2f2;
             --color-accent: #e0bb4e;
             --about-heading-offset: 110px;
           }
           html,
           body {
+            background: var(--color-bg);
             color: var(--color-text);
-            margin: 0;
             font-family: Brandon, sans-serif;
             line-height: 1.5;
+            margin: 0;
             padding: 0;
           }
           p {
@@ -34,23 +37,23 @@ export default function Layout({ children }) {
             src: url(${TrajanProRegWoff2}) format('woff2'),
               url(${TrajanProRegWoff}) format('woff');
             font-display: swap;
-            font-weight: normal;
             font-style: normal;
+            font-weight: normal;
           }
           @font-face {
             font-family: 'Libre Baskerville';
             src: url(${LibreBaskervilleWoff2}) format('woff2'),
               url(${LibreBaskervilleWoff}) format('woff');
             font-display: swap;
-            font-weight: normal;
             font-style: normal;
+            font-weight: normal;
           }
           @font-face {
             font-family: 'Brandon';
             src: url(${BrandonWoff2}) format('woff2'), url(${BrandonWoff}) format('woff');
             font-display: swap;
-            font-weight: normal;
             font-style: normal;
+            font-weight: normal;
           }
         `}
       />

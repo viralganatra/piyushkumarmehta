@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
 import SectionIntro from '../components/home-page/intro';
 import SectionAbout from '../components/home-page/about';
+import SectionContact from '../components/home-page/contact';
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <SectionIntro />
       <main role="main">
         <SectionAbout />
+        <SectionContact />
       </main>
     </Layout>
   );
