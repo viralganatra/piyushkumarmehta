@@ -111,7 +111,7 @@ export default function HomePageAbout() {
           <source srcSet={PortraitLegacy} type="image/jpeg" />
           <Portrait
             src={PortraitLegacy}
-            alt="Piyushkumar Mehta - Hindu Wedding Priest (Piyushbhai)"
+            alt="Piyushkumar Mehta (Piyushbhai) doing Pranam - Hindu wedding priest"
           />
         </Picture>
         <MainText>
