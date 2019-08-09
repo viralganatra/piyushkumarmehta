@@ -161,7 +161,7 @@ export default function HomePageAbout() {
         css={css`
           background-color: #f2f2f2;
           padding: 20px 20px 20px 220px;
-          margin-top: -100px;
+          margin-top: -80px;
         `}
       >
         <p
@@ -191,7 +191,18 @@ export default function HomePageAbout() {
           `}
         >
           As each family can have different subtle traditions particularly around the
-          ceremony I am more than happy to adjust to meet your needs.
+          ceremony I am more than happy to accommodate your needs.
+        </p>
+        <p
+          css={css`
+            max-width: 40vw;
+          `}
+        >
+          Having performed wedding ceremonies throughout the UK and destinations abroad I
+          understand the time concerns and pressures that couples today face. It
+          isn&apos;t easy coordinating so many things together! Rest assured your ceremony
+          will be completed on time while still maintaining the rituals and process, to
+          bless you both on your auspicious day.
         </p>
       </div>
     </Section>
