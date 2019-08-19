@@ -63,7 +63,7 @@ export default function HomePageContact() {
           }
           svg {
             fill: white;
-            margin-right: 10px;
+            margin-right: 5px;
           }
         `}
       >
