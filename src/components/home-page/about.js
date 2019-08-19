@@ -4,11 +4,11 @@ import styled from '@emotion/styled';
 import { px2rem, clearfix } from '../../utils/styles';
 import PortraitModern from '../../content/assets/about.webp';
 import PortraitLegacy from '../../content/assets/piyushbhai-web.jpg';
+import HandHoldingLegacy from '../../content/assets/hand-holding.jpg';
 
 const Section = styled.section`
   margin: 0 auto;
   padding: 0 3vw;
-  /* max-width: ${px2rem(800)}; */
 `;
 
 const size = 85;
@@ -29,16 +29,10 @@ const Statement = styled.aside`
 `;
 
 const Heading = styled.h2`
-  /* background-color: white; */
   margin: 0;
   font-size: ${px2rem(58)};
   font-weight: normal;
   line-height: 1.3;
-  /* margin-left: 50%; */
-  /* padding: 50px; */
-  /* margin-top: calc(-1 * var(--about-heading-offset)); */
-  /* position: relative; */
-  /* z-index: 2; */
 `;
 
 const Tagline = styled.p`
@@ -52,26 +46,19 @@ const Tagline = styled.p`
 
 const About = styled.div`
   ${clearfix};
-  /* overflow: hidden; */
   padding: 0 5vw 0 10vw;
-  /* padding-bottom: 50px; */
 `;
 
-const MainText = styled.article`
-  /* padding-left: 12vw; */
-`;
+const MainText = styled.article``;
 
 const Picture = styled.picture`
   background: white;
   border: 20px solid white;
   float: right;
   margin: ${size}px 0 20px 20px;
-  /* overflow: hidden; */
 `;
 
-const Portrait = styled.img`
-  /* max-width: ${px2rem(600)}; */
-`;
+const Portrait = styled.img``;
 
 const Welcome = styled.p`
   border-left: 5px solid var(--color-accent);
@@ -156,50 +143,63 @@ export default function HomePageAbout() {
         css={css`
           ${clearfix};
           background-color: #f2f2f2;
-          padding: 20px 20px 20px 220px;
-          margin-top: -80px;
+          padding: 20px 20px 20px 160px;
+          display: flex;
         `}
       >
-        <p
+        <Picture
           css={css`
-            max-width: 40vw;
+            margin: 20px 0 0 0;
+            border: none;
+            background: transparent;
+            float: left;
           `}
         >
-          <span
+          {/* <source srcSet={PortraitModern} type="image/webp" /> */}
+          <source srcSet={HandHoldingLegacy} type="image/jpeg" />
+          <Portrait
+            src={HandHoldingLegacy}
+            alt="Piyushkumar Mehta (Piyushbhai) doing Pranam - Hindu wedding priest"
             css={css`
-              border-left: 5px solid var(--color-accent);
-              font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
-              font-size: ${px2rem(42)};
-              display: block;
-              padding-left: 30px;
-              margin: 20px 0;
+              width: 600px;
             `}
-          >
-            Sacred verses in Sanskrit
-          </span>
-          are chanted as I explain in easy to understand English the significance of each
-          stage of the ceremony{' '}
-          <em>(I can also explain in Gujarati and Hindi if required)</em>.
-        </p>
-        <p
+          />
+        </Picture>
+
+        <div
           css={css`
-            max-width: 40vw;
+            margin: 0 80px 0 50px;
           `}
         >
-          As each family can have different subtle traditions particularly around the
-          ceremony I am more than happy to accommodate your needs.
-        </p>
-        <p
-          css={css`
-            max-width: 40vw;
-          `}
-        >
-          Having performed wedding ceremonies throughout the UK and destinations abroad I
-          understand the time concerns and pressures that couples today face. It
-          isn&apos;t easy coordinating so many things together! Rest assured your ceremony
-          will be completed on time while still maintaining the rituals and process, to
-          bless you both on your auspicious day.
-        </p>
+          <p>
+            <span
+              css={css`
+                border-left: 5px solid var(--color-accent);
+                font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+                font-size: ${px2rem(42)};
+                display: block;
+                padding-left: 30px;
+                margin: 20px 0;
+              `}
+            >
+              Sacred verses in Sanskrit
+            </span>
+            are chanted as I explain in easy to understand English the significance of
+            each stage of the ceremony{' '}
+            <em>(I can also explain in Gujarati and Hindi if required)</em>.
+          </p>
+          <p>
+            As each family can have subtle differences in traditions, I am more than happy
+            to accommodate any requests.
+          </p>
+          <p>
+            Having performed wedding ceremonies throughout the UK and destinations abroad
+            I understand the time concerns and pressures that couples today face. It
+            isn&apos;t easy coordinating so many things together! Rest assured, your
+            ceremony will be completed on time while still maintaining the authenticity of
+            the rituals, to bless you both on your auspicious day.
+          </p>
+        </div>
       </div>
     </Section>
   );
