@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { px2rem } from '../../utils/styles';
+import { px2rem, clearfix } from '../../utils/styles';
 import PortraitModern from '../../content/assets/about.webp';
 import PortraitLegacy from '../../content/assets/piyushbhai-web.jpg';
 
@@ -51,15 +51,10 @@ const Tagline = styled.p`
 `;
 
 const About = styled.div`
+  ${clearfix};
   /* overflow: hidden; */
   padding: 0 5vw 0 10vw;
   /* padding-bottom: 50px; */
-
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
 `;
 
 const MainText = styled.article`
@@ -159,6 +154,7 @@ export default function HomePageAbout() {
       </About>
       <div
         css={css`
+          ${clearfix};
           background-color: #f2f2f2;
           padding: 20px 20px 20px 220px;
           margin-top: -80px;
