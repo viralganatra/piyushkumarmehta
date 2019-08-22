@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Global, css } from '@emotion/core';
 import TrajanProRegWoff2 from '../content/assets/fonts/trajan-pro-regular.woff2';
 import TrajanProRegWoff from '../content/assets/fonts/trajan-pro-regular.woff';
@@ -61,3 +62,7 @@ export default function Layout({ children }) {
     </>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
