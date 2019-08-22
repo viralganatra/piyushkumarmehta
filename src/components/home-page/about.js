@@ -115,10 +115,10 @@ export default function HomePageAbout() {
           </LordGanesha>
           <Welcome>Jai Shree Krishna,</Welcome>
           <WelcomeText>
-            I&apos;m Piyushbhai Mehta and I perform Hindu wedding ceremonies. I focus on
-            creating a spiritual atmosphere through silent ceremonies whereby you can
-            connect emotionally to God and your guests can observe and participate in your
-            special day.
+            I&apos;m Piyushbhai Mehta and I perform Hindu wedding ceremonies at both
+            intimate and grand scales. I focus on creating a spiritual atmosphere through
+            silent ceremonies, ensuring that you are connected with the divine energy
+            whilst engaging your wedding guests and loved ones in the auspicious ceremony.
           </WelcomeText>
 
           <button
@@ -182,22 +182,22 @@ export default function HomePageAbout() {
                 margin: 20px 0;
               `}
             >
-              Sacred verses in Sanskrit
+              Reciting the ceremony
             </span>
-            are chanted as I explain in easy to understand English the significance of
-            each stage of the ceremony{' '}
-            <em>(I can also explain in Gujarati and Hindi if required)</em>.
+            in both the sacred text of Sanskrit and the more commonly spoken English,
+            Gujarati and Hindi, I strive to communicate in such a way that both you and
+            your audience understand the significance and importance of each stage of this
+            traditional Hindu wedding ceremony.
           </p>
           <p>
-            As each family can have subtle differences in traditions, I am more than happy
-            to accommodate any requests.
+            Understanding that each couple and their respective families may have certain
+            requests, each ceremony is adapted according to your wishes.
           </p>
           <p>
-            Having performed wedding ceremonies throughout the UK and destinations abroad
-            I understand the time concerns and pressures that couples today face. It
-            isn&apos;t easy coordinating so many things together! Rest assured, your
-            ceremony will be completed on time while still maintaining the authenticity of
-            the rituals, to bless you both on your auspicious day.
+            Having performed Hindu wedding ceremonies across a range of destinations
+            within and outside of the UK, I adhere to maintain the values and authenticity
+            of such a revered ritual in a time-effective, organised and devotional manner,
+            ensuring it is a day that will remain forever in your hearts.
           </p>
         </div>
       </div>
