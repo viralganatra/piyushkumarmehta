@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import MainImageLegacy from '../../content/assets/bg-faded.jpg';
-import MainImageModern from '../../content/assets/bg-faded.webp';
+import MainImageLegacy from '../../content/assets/bg-intro-faded.jpg';
+import MainImageModern from '../../content/assets/bg-intro-faded.webp';
 import { px2rem } from '../../utils/styles';
 
 const borderBehindText = css`
