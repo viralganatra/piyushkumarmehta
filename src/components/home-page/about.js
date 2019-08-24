@@ -5,6 +5,7 @@ import { px2rem, clearfix } from '../../utils/styles';
 import PortraitModern from '../../content/assets/about.webp';
 import PortraitLegacy from '../../content/assets/piyushbhai-web.jpg';
 import HandHoldingLegacy from '../../content/assets/hand-holding.jpg';
+import Button from '../button';
 
 const Section = styled.section`
   margin: 0 auto;
@@ -70,6 +71,7 @@ const Welcome = styled.p`
 
 const WelcomeText = styled.p`
   line-height: 2;
+  margin: 30px 0;
 `;
 
 const LordGanesha = styled.svg`
@@ -121,22 +123,7 @@ export default function HomePageAbout() {
             whilst engaging your wedding guests and loved ones in the auspicious ceremony.
           </WelcomeText>
 
-          <button
-            type="button"
-            css={css`
-              background: var(--color-attention);
-              border: none;
-              color: white;
-              cursor: pointer;
-              font-size: 14px;
-              letter-spacing: 2px;
-              margin-top: 10px;
-              padding: 11px 28px;
-              text-transform: uppercase;
-            `}
-          >
-            Get in touch
-          </button>
+          <Button>Get in touch</Button>
         </MainText>
       </About>
       <div
