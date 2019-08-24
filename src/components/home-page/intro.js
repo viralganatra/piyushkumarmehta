@@ -29,7 +29,7 @@ const borderBehindText = css`
 `;
 
 const Section = styled.section`
-  font-family: TrajanPro, Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--font-family-intro);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
   text-transform: uppercase;
 `;

@@ -21,7 +21,7 @@ const Statement = styled.aside`
   margin-top: calc(-1 * var(--about-heading-offset));
   position: relative;
   z-index: 2;
-  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--font-family-heading);
 
   > * {
     max-width: 650px;
@@ -39,7 +39,7 @@ const Tagline = styled.p`
   color: var(--color-accent);
   text-transform: uppercase;
   font-weight: bold;
-  font-family: TrajanPro;
+  font-family: var(--font-family-intro);
   font-size: ${px2rem(30)};
   letter-spacing: 12px;
 `;
@@ -62,7 +62,7 @@ const Portrait = styled.img``;
 
 const Welcome = styled.p`
   border-left: 5px solid var(--color-accent);
-  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--font-family-heading);
   font-size: ${px2rem(42)};
   padding: 15px 0 15px 30px;
   text-decoration: underline;
@@ -124,7 +124,7 @@ export default function HomePageAbout() {
           <button
             type="button"
             css={css`
-              background: #cd413c;
+              background: var(--color-attention);
               border: none;
               color: white;
               cursor: pointer;
@@ -142,7 +142,7 @@ export default function HomePageAbout() {
       <div
         css={css`
           ${clearfix};
-          background-color: #f2f2f2;
+          background-color: var(--color-bg-shade);
           padding: 20px 20px 20px 160px;
           display: flex;
         `}
@@ -175,7 +175,7 @@ export default function HomePageAbout() {
             <span
               css={css`
                 border-left: 5px solid var(--color-accent);
-                font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+                font-family: var(--font-family-heading);
                 font-size: ${px2rem(42)};
                 display: block;
                 padding-left: 30px;

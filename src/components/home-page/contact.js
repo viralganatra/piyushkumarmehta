@@ -4,14 +4,14 @@ import { css } from '@emotion/core';
 import { px2rem } from '../../utils/styles';
 
 const Section = styled.section`
-  background-color: #cd413c;
+  background-color: var(--color-attention);
   margin: 20px 3vw 20px 3vw;
   padding: 25px 0;
   color: white;
 `;
 
 const Heading = styled.h2`
-  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+  font-family: var(--font-family-heading);
   font-size: ${px2rem(42)};
   font-weight: normal;
   color: white;

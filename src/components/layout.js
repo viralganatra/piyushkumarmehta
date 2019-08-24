@@ -16,16 +16,22 @@ export default function Layout({ children }) {
         styles={css`
           :root {
             --color-bg: #fff;
+            --color-bg-shade: #f2f2f2;
             --color-text: #505057;
-            --color-primary: #f2f2f2;
             --color-accent: #e0bb4e;
+            --color-attention: #cd413c;
+
             --about-heading-offset: 110px;
+
+            --font-family-base: Brandon, sans-serif;
+            --font-family-heading: 'Libre Baskerville', Georgia, Times, serif;
+            --font-family-intro: 'TrajanPro', Georgia, Times, serif;
           }
           html,
           body {
             background: var(--color-bg);
             color: var(--color-text);
-            font-family: Brandon, sans-serif;
+            font-family: var(--font-family-base);
             line-height: 1.5;
             margin: 0;
             padding: 0;
