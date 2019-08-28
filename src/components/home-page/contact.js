@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { px2rem } from '../../utils/styles';
@@ -19,9 +19,9 @@ const Heading = styled.h2`
   margin: 0;
 `;
 
-export default function HomePageContact() {
+export default forwardRef(function HomePageContact(props, ref) {
   return (
-    <Section>
+    <Section ref={ref}>
       <Heading>Contact Me</Heading>
 
       <p
@@ -100,4 +100,4 @@ export default function HomePageContact() {
       </ul>
     </Section>
   );
-}
+});

@@ -1,9 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import MainImageLegacy from '../../content/assets/bg-intro-faded.jpg';
 import MainImageModern from '../../content/assets/bg-intro-faded.webp';
 import { px2rem } from '../../utils/styles';
+import { scrollToRef } from '../../utils/misc';
 
 const borderBehindText = css`
   display: table;
@@ -14,7 +16,7 @@ const borderBehindText = css`
 
   &::before,
   &::after {
-    border-top: 1px solid #fff;
+    border-top: 1px solid var(--color-bg);
     content: '';
     display: table-cell;
     position: relative;
@@ -28,10 +30,14 @@ const borderBehindText = css`
   }
 `;
 
-const Section = styled.section`
+const fontStyles = css`
   font-family: var(--font-family-intro);
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
   text-transform: uppercase;
+`;
+
+const Section = styled.section`
+  ${fontStyles};
 `;
 
 const Masthead = styled.header`
@@ -46,7 +52,7 @@ const Heading = styled.h1`
   padding-top: 50px;
   padding-bottom: 15px;
   text-align: center;
-  color: #fff;
+  color: var(--color-bg);
   font-weight: normal;
   font-size: ${px2rem(72)};
   ${borderBehindText};
@@ -55,7 +61,7 @@ const Heading = styled.h1`
 const TagLine = styled.h2`
   margin: 0;
   text-align: center;
-  color: #fff;
+  color: var(--color-bg);
   font-size: ${px2rem(40)};
   font-weight: normal;
   ${borderBehindText};
@@ -83,7 +89,7 @@ const Navigation = styled.nav`
     margin: 0;
     padding: 0;
     list-style: none;
-    padding: 20px;
+    padding: 1px 20px;
   }
   li {
     position: relative;
@@ -96,15 +102,24 @@ const Navigation = styled.nav`
       margin-right: 50px;
     }
   }
-  a {
+  button {
+    ${fontStyles};
+    background: none;
+    border: 1px solid transparent;
     color: white;
-    text-decoration: none;
-    padding: 20px;
+    cursor: pointer;
     font-size: 24px;
+    height: 72px;
+    padding: 20px;
+
+    &:focus {
+      border-color: var(--color-bg);
+      outline: none;
+    }
   }
 `;
 
-export default function HomePageIntro() {
+export default function HomePageIntro({ aboutSectionRef, contactSectionRef }) {
   return (
     <Section>
       <Masthead>
@@ -123,13 +138,23 @@ export default function HomePageIntro() {
       <Navigation>
         <ul>
           <li>
-            <a href="#about">About</a>
+            <button type="button" onClick={() => scrollToRef(aboutSectionRef)}>
+              About
+            </button>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <button type="button" onClick={() => scrollToRef(contactSectionRef)}>
+              Contact
+            </button>
           </li>
         </ul>
       </Navigation>
     </Section>
   );
 }
+
+HomePageIntro.propTypes = {
+  aboutSectionRef: PropTypes.PropTypes.shape({ current: PropTypes.elementType })
+    .isRequired,
+  contactSectionRef: PropTypes.shape({ current: PropTypes.elementType }).isRequired,
+};

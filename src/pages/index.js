@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
 import SectionIntro from '../components/home-page/intro';
@@ -7,6 +7,9 @@ import SectionGallery from '../components/home-page/gallery';
 import SectionContact from '../components/home-page/contact';
 
 export default function HomePage() {
+  const aboutSectionRef = useRef(null);
+  const contactSectionRef = useRef(null);
+
   return (
     <Layout>
       <Helmet>
@@ -17,11 +20,14 @@ export default function HomePage() {
           content="Hi. I am a Hindu wedding priest based in London who performs silent ceremonies, reciting our sacred Sanksrit verses whilst explaining in English."
         />
       </Helmet>
-      <SectionIntro />
+      <SectionIntro
+        aboutSectionRef={aboutSectionRef}
+        contactSectionRef={contactSectionRef}
+      />
       <main role="main">
-        <SectionAbout />
+        <SectionAbout ref={aboutSectionRef} contactSectionRef={contactSectionRef} />
         <SectionGallery />
-        <SectionContact />
+        <SectionContact ref={contactSectionRef} />
       </main>
     </Layout>
   );
