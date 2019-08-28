@@ -120,7 +120,8 @@ export default function HomePageAbout() {
             I&apos;m Piyushbhai Mehta and I perform Hindu wedding ceremonies at both
             intimate and grand scales. I focus on creating a spiritual atmosphere through
             silent ceremonies, ensuring that you are connected with the divine energy
-            whilst engaging your wedding guests and loved ones in the auspicious ceremony.
+            whilst engaging your wedding guests and loved ones in your auspicious
+            ceremony.
           </WelcomeText>
 
           <Button>Get in touch</Button>
