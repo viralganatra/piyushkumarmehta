@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import MainImageLegacy from '../../content/assets/bg-intro-faded.jpg';
-import MainImageModern from '../../content/assets/bg-intro-faded.webp';
-import { px2rem } from '../../utils/styles';
-import { scrollToRef } from '../../utils/misc';
+import MainImageLegacy from 'content/assets/bg-intro-faded.jpg';
+import MainImageModern from 'content/assets/bg-intro-faded.webp';
+import { px2rem } from 'utils/styles';
+import { scrollToRef } from 'utils/misc';
 
 const borderBehindText = css`
   display: table;

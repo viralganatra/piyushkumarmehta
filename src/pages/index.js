@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import { Helmet } from 'react-helmet';
-import Layout from '../components/layout';
-import SectionIntro from '../components/home-page/intro';
-import SectionAbout from '../components/home-page/about';
-import SectionGallery from '../components/home-page/gallery';
-import SectionContact from '../components/home-page/contact';
+import Layout from 'components/layout';
+import SectionIntro from 'components/home-page/intro';
+import SectionAbout from 'components/home-page/about';
+import SectionGallery from 'components/home-page/gallery';
+import SectionContact from 'components/home-page/contact';
 
 export default function HomePage() {
   const aboutSectionRef = useRef(null);

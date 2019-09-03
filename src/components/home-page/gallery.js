@@ -1,11 +1,11 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { px2rem } from '../../utils/styles';
-import AnilKapoor from '../../content/assets/anil-kapoor.jpg';
-import SonamKapoor from '../../content/assets/sonam-kapoor.jpg';
-import Katha1 from '../../content/assets/DSC289.jpg';
-import Katha2 from '../../content/assets/DSC290.jpg';
+import { px2rem } from 'utils/styles';
+import AnilKapoor from 'content/assets/anil-kapoor.jpg';
+import SonamKapoor from 'content/assets/sonam-kapoor.jpg';
+import Katha1 from 'content/assets/DSC289.jpg';
+import Katha2 from 'content/assets/DSC290.jpg';
 
 const Section = styled.section`
   display: flex;

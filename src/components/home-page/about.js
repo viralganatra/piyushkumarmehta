@@ -2,12 +2,12 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { px2rem, clearfix } from '../../utils/styles';
-import PortraitModern from '../../content/assets/about.webp';
-import PortraitLegacy from '../../content/assets/piyushbhai-web.jpg';
-import HandHoldingLegacy from '../../content/assets/hand-holding.jpg';
-import Button from '../button';
-import { scrollToRef } from '../../utils/misc';
+import { px2rem, clearfix } from 'utils/styles';
+import PortraitModern from 'content/assets/about.webp';
+import PortraitLegacy from 'content/assets/piyushbhai-web.jpg';
+import HandHoldingLegacy from 'content/assets/hand-holding.jpg';
+import Button from 'components/button';
+import { scrollToRef } from 'utils/misc';
 
 const Section = styled.section`
   margin: 0 auto;

@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { px2rem } from '../../utils/styles';
+import { px2rem } from 'utils/styles';
 
 const Section = styled.section`
   background-color: var(--color-attention);
