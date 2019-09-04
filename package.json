@@ -7,8 +7,8 @@
   "scripts": {
     "build": "gatsby build",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "gatsby develop",
-    "serve": "gatsby serve"
+    "start": "gatsby develop -H 0.0.0.0",
+    "serve": "gatsby serve -H 0.0.0.0"
   },
   "dependencies": {
     "@viralganatra/app-scripts": "^3.0.0",
