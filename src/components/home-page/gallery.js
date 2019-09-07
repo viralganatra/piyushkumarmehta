@@ -1,20 +1,49 @@
 import React from 'react';
-import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { px2rem } from 'utils/styles';
 import AnilKapoor from 'content/assets/anil-kapoor.jpg';
 import SonamKapoor from 'content/assets/sonam-kapoor.jpg';
 import Katha1 from 'content/assets/DSC289.jpg';
 import Katha2 from 'content/assets/DSC290.jpg';
+import { px2rem, constrainLayout, SectionHeading } from 'utils/styles';
+import { media } from 'utils/breakpoints';
 
 const Section = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px 10vw 0 10vw;
+  ${constrainLayout};
+  display: grid;
+  margin-bottom: var(--section-offset);
+  margin-top: var(--section-offset);
+
+  ${media.above('md')`
+    grid-gap: var(--section-offset) 0;
+    grid-template-columns: repeat(6, 1fr);
+  `};
+`;
+
+const Heading = styled(SectionHeading)`
+  ${media.above('md')`
+    display: none;
+  `};
 `;
 
 const ImageWithCaption = styled.figure`
+  display: flex;
+  justify-content: center;
+  margin: 10px;
   position: relative;
+
+  ${media.above('md')`
+    grid-column: auto / span 3;
+    margin: 20px;
+  `};
+  ${media.above('lg')`
+    grid-column: auto / span 2;
+    margin-left: var(--gutter-section);
+    margin-right: var(--gutter-section);
+  `};
+`;
+
+const Picture = styled.picture`
+  width: 100%;
 `;
 
 const Caption = styled.figcaption`
@@ -34,94 +63,79 @@ const Caption = styled.figcaption`
 `;
 
 const Image = styled.img`
-  width: 350px;
-  height: 220px;
-  object-fit: cover;
   display: block;
-`;
+  object-fit: cover;
+  max-height: 500px;
+  width: 100%;
 
-const Heading = styled.h2`
-  margin: 0;
-  font-size: ${px2rem(58)};
-  font-weight: normal;
-  line-height: 1.3;
-  display: none;
+  ${media.above('md')`
+    height: 260px;
+  `};
 `;
 
 export default function HomePageGallery() {
   return (
     <Section>
-      <Heading>Gallery</Heading>
+      <Heading>Photo Gallery</Heading>
+
       <ImageWithCaption>
-        <picture>
+        <Picture>
           <Image
             src={AnilKapoor}
             loading="lazy"
             alt="Piyushbhai Mehta and family with Anil Kapoor"
           />
-        </picture>
+        </Picture>
         <Caption>With Anil Kapoor</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
-        <picture>
+        <Picture>
           <Image
             src={SonamKapoor}
             loading="lazy"
             alt="Piyushbhai Mehta and family with Sonam Kapoor"
-            css={css`
-              /* height: 400px; */
-            `}
           />
-        </picture>
+        </Picture>
         <Caption>With Sonam Kapoor</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
-        <picture>
+        <Picture>
           <Image
             src={Katha1}
             loading="lazy"
             alt="Piyushbhai Mehta and family with Sonam Kapoor"
-            css={css`
-              /* height: 450px; */
-            `}
           />
-        </picture>
+        </Picture>
         <Caption>Bhagwat Saptah - Florida</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
-        <picture>
+        <Picture>
           <Image
             src={Katha2}
             loading="lazy"
             alt="Piyushbhai Mehta in Coral Springs Florida"
-            css={css`
-              /* height: 400px; */
-            `}
           />
-        </picture>
+        </Picture>
         <Caption>Bhagwat Saptah - Florida</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
-        <picture>
+        <Picture>
           <Image
             src={AnilKapoor}
             loading="lazy"
             alt="Piyushbhai Mehta and family with Anil Kapoor"
           />
-        </picture>
+        </Picture>
         <Caption>With Anil Kapoor</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
-        <picture>
+        <Picture>
           <Image
             src={SonamKapoor}
             loading="lazy"
             alt="Piyushbhai Mehta and family with Sonam Kapoor"
-            css={css`
-              /* height: 400px; */
-            `}
           />
-        </picture>
+        </Picture>
         <Caption>With Sonam Kapoor</Caption>
       </ImageWithCaption>
     </Section>
