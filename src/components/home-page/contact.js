@@ -53,6 +53,7 @@ const ContactListLink = styled.a`
   justify-content: center;
   padding: 13px 0;
   text-decoration: underline;
+  transition: 0.3s all ease;
 
   &:focus {
     border-color: var(--color-bg);

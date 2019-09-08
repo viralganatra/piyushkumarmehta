@@ -149,6 +149,7 @@ const Navigation = styled.nav`
     font-size: 24px;
     height: 72px;
     padding: 20px;
+    transition: 0.3s all ease;
 
     &:focus {
       border-color: var(--color-bg);
