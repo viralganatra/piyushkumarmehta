@@ -33,7 +33,10 @@ const ContactListItem = styled.li`
   font-size: ${px2rem(20)};
 
   ${media.above('md')`
+    display: flex;
+
     &:nth-of-type(odd) {
+      justify-content: flex-end;
       margin-right: 10px;
     }
     &:nth-of-type(even) {
@@ -44,14 +47,20 @@ const ContactListItem = styled.li`
 
 const ContactListLink = styled.a`
   align-items: center;
+  border: 1px solid transparent;
   color: var(--color-attention-inverse);
   display: flex;
   justify-content: center;
   padding: 13px 0;
   text-decoration: underline;
 
+  &:focus {
+    border-color: var(--color-bg);
+    outline: none;
+  }
+
   ${media.above('md')`
-    justify-content: flex-start;
+    display: inline-flex;
     padding: 10px;
     text-decoration: none;
 
