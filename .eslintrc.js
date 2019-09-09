@@ -1,3 +1,9 @@
+const path = require('path');
+const getAliases = require('./aliases');
+
+const resolvePath = (pathname) => path.resolve(__dirname, pathname);
+const aliases = getAliases(resolvePath);
+
 module.exports = {
   extends: [require.resolve('@viralganatra/app-scripts/configs/eslint')],
 
@@ -8,13 +14,7 @@ module.exports = {
 
   settings: {
     'import/resolver': {
-      alias: [
-        ['components', './src/components'],
-        ['constants', './src/constants/'],
-        ['content', './src/content/'],
-        ['pages', './src/pages/'],
-        ['utils', './src/utils'],
-      ],
+      alias: Object.entries(aliases),
     },
   },
 };

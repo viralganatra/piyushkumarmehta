@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import AnilKapoor from 'content/assets/anil-kapoor.jpg';
-import SonamKapoor from 'content/assets/sonam-kapoor.jpg';
-import Katha1 from 'content/assets/DSC289.jpg';
-import Katha2 from 'content/assets/DSC290.jpg';
+import AnilKapoor from 'images/anil-kapoor.jpg';
+import SonamKapoor from 'images/sonam-kapoor.jpg';
+import Katha1 from 'images/DSC289.jpg';
+import Katha2 from 'images/DSC290.jpg';
 import { px2rem, constrainLayout, SectionHeading } from 'utils/styles';
 import { media } from 'utils/breakpoints';
 

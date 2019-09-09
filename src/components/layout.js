@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Global, css } from '@emotion/core';
-import TrajanProRegWoff2 from 'content/assets/fonts/trajan-pro-regular.woff2';
-import TrajanProRegWoff from 'content/assets/fonts/trajan-pro-regular.woff';
-import LibreBaskervilleWoff2 from 'content/assets/fonts/libre-baskerville-regular.woff2';
-import LibreBaskervilleWoff from 'content/assets/fonts/libre-baskerville-regular.woff';
-import BrandonWoff2 from 'content/assets/fonts/brandon-regular.woff2';
-import BrandonWoff from 'content/assets/fonts/brandon-regular.woff';
+import TrajanProRegWoff2 from 'fonts/trajan-pro-regular.woff2';
+import TrajanProRegWoff from 'fonts/trajan-pro-regular.woff';
+import LibreBaskervilleWoff2 from 'fonts/libre-baskerville-regular.woff2';
+import LibreBaskervilleWoff from 'fonts/libre-baskerville-regular.woff';
+import BrandonWoff2 from 'fonts/brandon-regular.woff2';
+import BrandonWoff from 'fonts/brandon-regular.woff';
 import { px2rem } from 'utils/styles';
 import { media } from 'utils/breakpoints';
 import { normalize } from 'utils/normalize';

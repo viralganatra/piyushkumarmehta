@@ -2,9 +2,11 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { px2rem, clearfix, constrainLayout, EmphasisedText } from 'utils/styles';
-import PortraitModern from 'content/assets/about.webp';
-import PortraitLegacy from 'content/assets/piyushbhai-web.jpg';
-import HandHoldingLegacy from 'content/assets/hand-holding.jpg';
+// import PortraitModern from 'images/about.webp';
+import PortraitLegacy600 from 'images/piyushbhai-web.jpg';
+import PortraitLegacy900 from 'images/piyushbhai@1.5x.jpg';
+import PortraitLegacy1200 from 'images/piyushbhai@2x.jpg';
+import HandHoldingLegacy from 'images/hand-holding.jpg';
 import Button from 'components/button';
 import { scrollToRef } from 'utils/misc';
 import { media } from 'utils/breakpoints';
@@ -192,9 +194,15 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
 
         <MainPicture>
           {/* <source srcSet={PortraitModern} type="image/webp" /> */}
-          <source srcSet={PortraitLegacy} type="image/jpeg" />
+          <source
+            srcSet={`
+            ${PortraitLegacy600} 600w, ${PortraitLegacy900} 900w, ${PortraitLegacy1200} 1200w
+          `}
+            sizes="100vw"
+            type="image/jpeg"
+          />
           <Portrait
-            src={PortraitLegacy}
+            src={PortraitLegacy600}
             alt="Piyushkumar Mehta (Piyushbhai) doing Pranam - Hindu wedding priest"
           />
         </MainPicture>

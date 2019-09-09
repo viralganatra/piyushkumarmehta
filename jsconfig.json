@@ -5,6 +5,8 @@
       "components/*": ["src/components/*"],
       "constants/*": ["src/constants/*"],
       "content/*": ["src/content/*"],
+      "fonts/*": ["src/assets/fonts/*"],
+      "images/*": ["src/assets/images/*"],
       "pages/*": ["src/pages/*"],
       "utils/*": ["src/utils/*"]
     }
