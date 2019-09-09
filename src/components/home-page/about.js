@@ -2,14 +2,17 @@ import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { px2rem, clearfix, constrainLayout, EmphasisedText } from 'utils/styles';
-// import PortraitModern from 'images/about.webp';
-import PortraitLegacy600 from 'images/piyushbhai-web.jpg';
-import PortraitLegacy900 from 'images/piyushbhai@1.5x.jpg';
-import PortraitLegacy1200 from 'images/piyushbhai@2x.jpg';
+import PortraitLegacy450 from 'images/piyushbhai-450w.jpg';
+import PortraitLegacy600 from 'images/piyushbhai-600w.jpg';
+import PortraitLegacy900 from 'images/piyushbhai-900w.jpg';
+import PortraitModern450 from 'images/piyushbhai-450w.webp';
+import PortraitModern600 from 'images/piyushbhai-600w.webp';
+import PortraitModern900 from 'images/piyushbhai-900w.webp';
 import HandHoldingLegacy from 'images/hand-holding.jpg';
 import Button from 'components/button';
 import { scrollToRef } from 'utils/misc';
 import { media } from 'utils/breakpoints';
+import { BREAKPOINT_MD } from 'constants/responsive';
 
 const ConstrainedLayout = styled.div`
   ${constrainLayout};
@@ -193,12 +196,18 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
         </LordGanesha>
 
         <MainPicture>
-          {/* <source srcSet={PortraitModern} type="image/webp" /> */}
           <source
             srcSet={`
-            ${PortraitLegacy600} 600w, ${PortraitLegacy900} 900w, ${PortraitLegacy1200} 1200w
-          `}
-            sizes="100vw"
+              ${PortraitModern450} 450w, ${PortraitModern600} 600w, ${PortraitModern900} 900w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${PortraitLegacy450} 450w, ${PortraitLegacy600} 600w, ${PortraitLegacy900} 900w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
             type="image/jpeg"
           />
           <Portrait
