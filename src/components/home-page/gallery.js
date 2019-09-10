@@ -1,11 +1,22 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import AnilKapoor from 'images/anil-kapoor.jpg';
-import SonamKapoor from 'images/sonam-kapoor.jpg';
+import AnilKapoorLegacy400 from 'images/anil-kapoor-400w.jpg';
+import AnilKapoorLegacy600 from 'images/anil-kapoor-600w.jpg';
+import AnilKapoorLegacy800 from 'images/anil-kapoor-800w.jpg';
+import AnilKapoorModern400 from 'images/anil-kapoor-400w.webp';
+import AnilKapoorModern600 from 'images/anil-kapoor-600w.webp';
+import AnilKapoorModern800 from 'images/anil-kapoor-800w.webp';
+import SonamKapoorLegacy400 from 'images/sonam-kapoor-400w.jpg';
+import SonamKapoorLegacy600 from 'images/sonam-kapoor-600w.jpg';
+import SonamKapoorLegacy800 from 'images/sonam-kapoor-800w.jpg';
+import SonamKapoorModern400 from 'images/sonam-kapoor-400w.webp';
+import SonamKapoorModern600 from 'images/sonam-kapoor-600w.webp';
+import SonamKapoorModern800 from 'images/sonam-kapoor-800w.webp';
 import Katha1 from 'images/DSC289.jpg';
 import Katha2 from 'images/DSC290.jpg';
 import { px2rem, constrainLayout, SectionHeading } from 'utils/styles';
 import { media } from 'utils/breakpoints';
+import { BREAKPOINT_MD, BREAKPOINT_LG } from 'constants/responsive';
 
 const Section = styled.section`
   ${constrainLayout};
@@ -80,9 +91,38 @@ export default function HomePageGallery() {
 
       <ImageWithCaption>
         <Picture>
+          <source
+            srcSet={`
+              ${AnilKapoorLegacy400} 400w, ${AnilKapoorModern600} 600w, ${AnilKapoorModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${AnilKapoorLegacy400} 400w, ${AnilKapoorModern600} 600w, ${AnilKapoorModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${AnilKapoorModern400} 400w, ${AnilKapoorLegacy600} 600w, ${AnilKapoorLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/jpeg"
+          />
+          <source
+            srcSet={`
+              ${AnilKapoorModern400} 400w, ${AnilKapoorLegacy600} 600w, ${AnilKapoorLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/jpeg"
+          />
           <Image
-            src={AnilKapoor}
+            src={AnilKapoorLegacy400}
             loading="lazy"
+            width="400"
             alt="Piyushbhai Mehta and family with Anil Kapoor"
           />
         </Picture>
@@ -90,9 +130,38 @@ export default function HomePageGallery() {
       </ImageWithCaption>
       <ImageWithCaption>
         <Picture>
+          <source
+            srcSet={`
+              ${SonamKapoorLegacy400} 400w, ${SonamKapoorModern600} 600w, ${SonamKapoorModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${SonamKapoorLegacy400} 400w, ${SonamKapoorModern600} 600w, ${SonamKapoorModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${SonamKapoorModern400} 400w, ${SonamKapoorLegacy600} 600w, ${SonamKapoorLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/jpeg"
+          />
+          <source
+            srcSet={`
+              ${SonamKapoorModern400} 400w, ${SonamKapoorLegacy600} 600w, ${SonamKapoorLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/jpeg"
+          />
           <Image
-            src={SonamKapoor}
+            src={SonamKapoorLegacy400}
             loading="lazy"
+            width="400"
             alt="Piyushbhai Mehta and family with Sonam Kapoor"
           />
         </Picture>
@@ -102,7 +171,7 @@ export default function HomePageGallery() {
         <Picture>
           <Image
             src={Katha1}
-            loading="lazy"
+            // loading="lazy"
             alt="Piyushbhai Mehta and family with Sonam Kapoor"
           />
         </Picture>
@@ -112,7 +181,7 @@ export default function HomePageGallery() {
         <Picture>
           <Image
             src={Katha2}
-            loading="lazy"
+            // loading="lazy"
             alt="Piyushbhai Mehta in Coral Springs Florida"
           />
         </Picture>
@@ -120,9 +189,38 @@ export default function HomePageGallery() {
       </ImageWithCaption>
       <ImageWithCaption>
         <Picture>
+          <source
+            srcSet={`
+              ${AnilKapoorLegacy400} 400w, ${AnilKapoorModern600} 600w, ${AnilKapoorModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${AnilKapoorLegacy400} 400w, ${AnilKapoorModern600} 600w, ${AnilKapoorModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${AnilKapoorModern400} 400w, ${AnilKapoorLegacy600} 600w, ${AnilKapoorLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/jpeg"
+          />
+          <source
+            srcSet={`
+              ${AnilKapoorModern400} 400w, ${AnilKapoorLegacy600} 600w, ${AnilKapoorLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/jpeg"
+          />
           <Image
-            src={AnilKapoor}
+            src={AnilKapoorLegacy400}
             loading="lazy"
+            width="400"
             alt="Piyushbhai Mehta and family with Anil Kapoor"
           />
         </Picture>
@@ -130,9 +228,38 @@ export default function HomePageGallery() {
       </ImageWithCaption>
       <ImageWithCaption>
         <Picture>
+          <source
+            srcSet={`
+              ${SonamKapoorLegacy400} 400w, ${SonamKapoorModern600} 600w, ${SonamKapoorModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${SonamKapoorLegacy400} 400w, ${SonamKapoorModern600} 600w, ${SonamKapoorModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${SonamKapoorModern400} 400w, ${SonamKapoorLegacy600} 600w, ${SonamKapoorLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/jpeg"
+          />
+          <source
+            srcSet={`
+              ${SonamKapoorModern400} 400w, ${SonamKapoorLegacy600} 600w, ${SonamKapoorLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/jpeg"
+          />
           <Image
-            src={SonamKapoor}
+            src={SonamKapoorLegacy400}
             loading="lazy"
+            width="400"
             alt="Piyushbhai Mehta and family with Sonam Kapoor"
           />
         </Picture>
