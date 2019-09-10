@@ -19,6 +19,9 @@ export default function HomePage() {
           name="description"
           content="Hi. I am a Hindu wedding priest based in London who performs silent ceremonies, reciting our sacred Sanksrit verses whilst explaining in English."
         />
+        <meta name="theme-color" content="#ffffff" />
+        <link rel="apple-touch-icon" href="/favicon-192x192.png" />
+        <link rel="manifest" href="/manifest.webmanifest" />
       </Helmet>
       <SectionIntro
         aboutSectionRef={aboutSectionRef}
