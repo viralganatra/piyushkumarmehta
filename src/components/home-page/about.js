@@ -8,7 +8,12 @@ import PortraitLegacy900 from 'images/piyushbhai-900w.jpg';
 import PortraitModern450 from 'images/piyushbhai-450w.webp';
 import PortraitModern600 from 'images/piyushbhai-600w.webp';
 import PortraitModern900 from 'images/piyushbhai-900w.webp';
-import HandHoldingLegacy from 'images/hand-holding.jpg';
+import HandHoldingLegacy450 from 'images/hand-holding-450w.jpg';
+import HandHoldingLegacy600 from 'images/hand-holding-600w.jpg';
+import HandHoldingLegacy900 from 'images/hand-holding-900w.jpg';
+import HandHoldingModern450 from 'images/hand-holding-450w.webp';
+import HandHoldingModern600 from 'images/hand-holding-600w.webp';
+import HandHoldingModern900 from 'images/hand-holding-900w.webp';
 import Button from 'components/button';
 import { scrollToRef } from 'utils/misc';
 import { media } from 'utils/breakpoints';
@@ -235,10 +240,22 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
         <ConstrainedLayout>
           <RecitingContent>
             <RecitingPicture>
-              {/* <source srcSet={PortraitModern} type="image/webp" /> */}
-              <source srcSet={HandHoldingLegacy} type="image/jpeg" />
+              <source
+                srcSet={`
+                  ${HandHoldingModern450} 450w, ${HandHoldingModern600} 600w, ${HandHoldingModern900} 900w
+              `}
+                sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+                type="image/webp"
+              />
+              <source
+                srcSet={`
+                  ${HandHoldingLegacy450} 450w, ${HandHoldingLegacy600} 600w, ${HandHoldingLegacy900} 900w
+              `}
+                sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+                type="image/jpeg"
+              />
               <Portrait
-                src={HandHoldingLegacy}
+                src={HandHoldingLegacy600}
                 alt="Piyushkumar Mehta (Piyushbhai) doing Pranam - Hindu wedding priest"
               />
             </RecitingPicture>
