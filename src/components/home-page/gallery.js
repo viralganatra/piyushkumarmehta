@@ -12,8 +12,10 @@ import SonamKapoorLegacy800 from 'images/sonam-kapoor-800w.jpg';
 import SonamKapoorModern400 from 'images/sonam-kapoor-400w.webp';
 import SonamKapoorModern600 from 'images/sonam-kapoor-600w.webp';
 import SonamKapoorModern800 from 'images/sonam-kapoor-800w.webp';
-import Katha1 from 'images/DSC289.jpg';
-import Katha2 from 'images/DSC290.jpg';
+import KathaLegacy800 from 'images/katha-800w.jpg';
+import KathaModern800 from 'images/katha-800w.webp';
+import KathaSofaLegacy800 from 'images/katha-sofa-800w.jpg';
+import KathaSofaModern800 from 'images/katha-sofa-800w.webp';
 import { px2rem, constrainLayout, SectionHeading } from 'utils/styles';
 import { media } from 'utils/breakpoints';
 import { BREAKPOINT_MD, BREAKPOINT_LG } from 'constants/responsive';
@@ -169,19 +171,77 @@ export default function HomePageGallery() {
       </ImageWithCaption>
       <ImageWithCaption>
         <Picture>
+          <source
+            srcSet={`
+              ${KathaModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${KathaModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${KathaLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/jpeg"
+          />
+          <source
+            srcSet={`
+              ${KathaLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/jpeg"
+          />
           <Image
-            src={Katha1}
-            // loading="lazy"
-            alt="Piyushbhai Mehta and family with Sonam Kapoor"
+            src={KathaLegacy800}
+            loading="lazy"
+            width="800"
+            alt="Bhagwat Saptah - Florida"
           />
         </Picture>
         <Caption>Bhagwat Saptah - Florida</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
         <Picture>
+          <source
+            srcSet={`
+              ${KathaSofaModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${KathaSofaModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${KathaSofaLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/jpeg"
+          />
+          <source
+            srcSet={`
+              ${KathaSofaLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/jpeg"
+          />
           <Image
-            src={Katha2}
-            // loading="lazy"
+            src={KathaSofaLegacy800}
+            loading="lazy"
+            width="800"
             alt="Piyushbhai Mehta in Coral Springs Florida"
           />
         </Picture>
