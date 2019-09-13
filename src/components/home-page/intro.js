@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import MainImageLegacy from 'images/bg-intro-faded.jpg';
-import MainImageModern from 'images/bg-intro-faded.webp';
+import MainImageLegacy1560 from 'images/bg-intro-faded-1560w.jpg';
+import MainImageLegacy1200 from 'images/bg-intro-faded-1200w.jpg';
+import MainImageLegacy800 from 'images/bg-intro-faded-800w.jpg';
+import MainImageModern1560 from 'images/bg-intro-faded-1560w.webp';
+import MainImageModern1200 from 'images/bg-intro-faded-1200w.webp';
+import MainImageModern800 from 'images/bg-intro-faded-800w.webp';
 import { px2rem, responsiveFontSize } from 'utils/styles';
 import { scrollToRef } from 'utils/misc';
 import { media } from 'utils/breakpoints';
@@ -42,7 +46,7 @@ const Section = styled.section`
 `;
 
 const Masthead = styled.header`
-  height: 100vh;
+  height: 60vh;
   position: relative;
   width: 100%;
   z-index: 1;
@@ -163,10 +167,24 @@ export default function HomePageIntro({ aboutSectionRef, contactSectionRef }) {
     <Section>
       <Masthead>
         <picture>
-          <source srcSet={MainImageModern} type="image/webp" />
-          <source srcSet={MainImageLegacy} type="image/jpeg" />
+          <source
+            srcSet={`
+              ${MainImageModern800} 800w,
+              ${MainImageModern1200} 1200w,
+              ${MainImageModern1560} 1560w
+            `}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${MainImageLegacy800} 800w,
+              ${MainImageLegacy1200} 1200w,
+              ${MainImageLegacy1560} 1560w
+            `}
+            type="image/jpeg"
+          />
           <HeroImage
-            src={MainImageLegacy}
+            src={MainImageLegacy1200}
             alt="Piyushkumar Mehta - Modern Hindu Wedding Priest (Piyushbhai)"
           />
         </picture>
