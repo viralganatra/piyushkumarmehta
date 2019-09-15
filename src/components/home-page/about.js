@@ -49,7 +49,7 @@ const Heading = styled.h2`
   line-height: 1.3;
   margin: 0;
 
-  ${media.above('xl')`
+  ${media.above('xxl')`
     font-size: ${px2rem(50)};
   `};
 `;
@@ -63,7 +63,7 @@ const Tagline = styled.p`
   margin-bottom: 0;
   text-transform: uppercase;
 
-  ${media.above('xl')`
+  ${media.above('xxl')`
     font-size: ${px2rem(30)};
     letter-spacing: 9px;
   `};
@@ -139,16 +139,22 @@ const RecitingContent = styled.div`
   ${media.above('lg')`
     margin-top: var(--section-offset);
   `};
+
+  ${media.above('xl')`
+    display: grid;
+    grid-template-columns: var(--reciting-picture-max-width) auto;
+  `};
 `;
 
 const RecitingPicture = styled.picture`
   ${media.above('md')`
     float: left;
     margin: 0 var(--reciting-picture-offset) 10px 0;
+    max-width: var(--reciting-picture-max-width);
   `};
 
-  ${media.above('md')`
-    max-width: var(--reciting-picture-max-width);
+  ${media.above('xl')`
+    margin-bottom: 0;
   `};
 `;
 
@@ -169,6 +175,10 @@ RecitingEmphasisedText = styled(RecitingEmphasisedText)`
   ${media.above('md')`
     margin-left: calc(var(--reciting-picture-max-width) + var(--reciting-picture-offset));
     margin-top: 0;
+  `};
+
+  ${media.above('xl')`
+    margin-left: 0;
   `};
 `;
 

@@ -73,7 +73,7 @@ const Heading = styled.h1`
   ${media.above('md')`
     ${responsiveFontSize('1.45rem')}
   `};
-  ${media.above('xl')`
+  ${media.above('xxl')`
     font-size: ${px2rem(72)};
   `};
 `;
@@ -94,7 +94,7 @@ const TagLine = styled.h2`
   ${media.above('md')`
     ${responsiveFontSize('0.7rem')};
   `};
-  ${media.above('xl')`
+  ${media.above('xxl')`
     font-size: ${px2rem(40)};
   `}
 `;
@@ -126,7 +126,7 @@ const Navigation = styled.nav`
     margin: 0;
     padding: 1px 0;
 
-    ${media.above('xl')`
+    ${media.above('xxl')`
       padding-left: 20px;
       padding-right: 20px;
     `};
@@ -135,7 +135,7 @@ const Navigation = styled.nav`
     position: relative;
     z-index: 2;
 
-    ${media.above('xl')`
+    ${media.above('xxl')`
       &:first-of-type {
         margin-left: 50px;
       }

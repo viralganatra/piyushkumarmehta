@@ -5,6 +5,7 @@ import {
   BREAKPOINT_MD,
   BREAKPOINT_LG,
   BREAKPOINT_XL,
+  BREAKPOINT_XXL,
 } from 'constants/responsive';
 
 export const siteBreakpoints = {
@@ -13,6 +14,7 @@ export const siteBreakpoints = {
   md: BREAKPOINT_MD,
   lg: BREAKPOINT_LG,
   xl: BREAKPOINT_XL,
+  xxl: BREAKPOINT_XXL,
 };
 
 function getSizeFromBreakpoint(breakpointValue, breakpoints = {}) {
