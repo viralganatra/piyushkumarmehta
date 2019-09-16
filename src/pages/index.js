@@ -17,7 +17,7 @@ export default function HomePage() {
         <title>Hindu Wedding Priest - Silent Ceremonies | Piyushkumar Mehta</title>
         <meta
           name="description"
-          content="Hi. I am a Hindu wedding priest based in London who performs silent ceremonies, reciting our sacred Sanksrit verses whilst explaining in English."
+          content="I am a Hindu wedding priest who performs silent ceremonies at intimate and grand scales. I recite in Sanskrit whilst explaining in English, Gujarati and Hindi."
         />
         <meta name="theme-color" content="#ffffff" />
         <link rel="apple-touch-icon" href="/favicon-192x192.png" />
