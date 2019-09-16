@@ -13,7 +13,6 @@ export default function HomePage() {
   return (
     <Layout>
       <Helmet>
-        <html lang="en-GB" />
         <title>Hindu Wedding Priest - Silent Ceremonies | Piyushkumar Mehta</title>
         <meta
           name="description"
