@@ -1,8 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+require('dotenv').config();
 
 module.exports = {
   plugins: [
@@ -13,6 +9,12 @@ module.exports = {
       resolve: 'gatsby-plugin-force-file-loader',
       options: {
         rules: ['images'],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
       },
     },
   ],
