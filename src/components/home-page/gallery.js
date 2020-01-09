@@ -304,7 +304,7 @@ export default function HomePageGallery() {
             alt="Piyushbhai Mehta and family with Anil Kapoor"
           />
         </Picture>
-        <Caption>With Anil Kapoor</Caption>
+        <Caption>Anil Kapoor's home after Laxmi Poojan</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
         <Picture>
