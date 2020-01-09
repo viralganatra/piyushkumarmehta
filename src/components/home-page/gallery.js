@@ -12,10 +12,30 @@ import SonamKapoorLegacy800 from 'images/sonam-kapoor-800w.jpg';
 import SonamKapoorModern400 from 'images/sonam-kapoor-400w.webp';
 import SonamKapoorModern600 from 'images/sonam-kapoor-600w.webp';
 import SonamKapoorModern800 from 'images/sonam-kapoor-800w.webp';
-import KathaLegacy800 from 'images/katha-800w.jpg';
-import KathaModern800 from 'images/katha-800w.webp';
-import KathaSofaLegacy800 from 'images/katha-sofa-800w.jpg';
-import KathaSofaModern800 from 'images/katha-sofa-800w.webp';
+import MangalSutraLegacy400 from 'images/mangal-sutra-400w.jpg';
+import MangalSutraLegacy600 from 'images/mangal-sutra-600w.jpg';
+import MangalSutraLegacy800 from 'images/mangal-sutra-800w.jpg';
+import MangalSutraModern400 from 'images/mangal-sutra-400w.webp';
+import MangalSutraModern600 from 'images/mangal-sutra-600w.webp';
+import MangalSutraModern800 from 'images/mangal-sutra-800w.webp';
+import PortugalWeddingLegacy400 from 'images/portugal-wedding-400w.jpg';
+import PortugalWeddingLegacy600 from 'images/portugal-wedding-600w.jpg';
+import PortugalWeddingLegacy800 from 'images/portugal-wedding-800w.jpg';
+import PortugalWeddingModern400 from 'images/portugal-wedding-400w.webp';
+import PortugalWeddingModern600 from 'images/portugal-wedding-600w.webp';
+import PortugalWeddingModern800 from 'images/portugal-wedding-800w.webp';
+import KrishanAneetaLegacy400 from 'images/krishan-and-aneeta-400w.jpg';
+import KrishanAneetaLegacy600 from 'images/krishan-and-aneeta-600w.jpg';
+import KrishanAneetaLegacy800 from 'images/krishan-and-aneeta-800w.jpg';
+import KrishanAneetaModern400 from 'images/krishan-and-aneeta-400w.webp';
+import KrishanAneetaModern600 from 'images/krishan-and-aneeta-600w.webp';
+import KrishanAneetaModern800 from 'images/krishan-and-aneeta-800w.webp';
+import NehaRajanLegacy400 from 'images/neha-rajan-400w.jpg';
+import NehaRajanLegacy600 from 'images/neha-rajan-600w.jpg';
+import NehaRajanLegacy800 from 'images/neha-rajan-800w.jpg';
+import NehaRajanModern400 from 'images/neha-rajan-400w.webp';
+import NehaRajanModern600 from 'images/neha-rajan-600w.webp';
+import NehaRajanModern800 from 'images/neha-rajan-800w.webp';
 import { px2rem, constrainLayout, SectionHeading } from 'utils/styles';
 import { media } from 'utils/breakpoints';
 import { BREAKPOINT_MD, BREAKPOINT_LG } from 'constants/responsive';
@@ -95,40 +115,79 @@ export default function HomePageGallery() {
         <Picture>
           <source
             srcSet={`
-              ${AnilKapoorLegacy400} 400w, ${AnilKapoorModern600} 600w, ${AnilKapoorModern800} 800w
+              ${PortugalWeddingLegacy400} 400w, ${PortugalWeddingModern600} 600w, ${PortugalWeddingModern800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
             type="image/webp"
           />
           <source
             srcSet={`
-              ${AnilKapoorLegacy400} 400w, ${AnilKapoorModern600} 600w, ${AnilKapoorModern800} 800w
+              ${PortugalWeddingLegacy400} 400w, ${PortugalWeddingModern600} 600w, ${PortugalWeddingModern800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
             type="image/webp"
           />
           <source
             srcSet={`
-              ${AnilKapoorModern400} 400w, ${AnilKapoorLegacy600} 600w, ${AnilKapoorLegacy800} 800w
+              ${PortugalWeddingModern400} 400w, ${PortugalWeddingLegacy600} 600w, ${PortugalWeddingLegacy800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
             type="image/jpeg"
           />
           <source
             srcSet={`
-              ${AnilKapoorModern400} 400w, ${AnilKapoorLegacy600} 600w, ${AnilKapoorLegacy800} 800w
+              ${PortugalWeddingModern400} 400w, ${PortugalWeddingLegacy600} 600w, ${PortugalWeddingLegacy800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
             type="image/jpeg"
           />
           <Image
-            src={AnilKapoorLegacy400}
+            src={PortugalWeddingLegacy400}
             loading="lazy"
             width="400"
-            alt="Piyushbhai Mehta and family with Anil Kapoor"
+            alt="Piyushkumar Mehta performing Hindu wedding ceremony in Portugal"
           />
         </Picture>
-        <Caption>With Anil Kapoor</Caption>
+        <Caption>Wedding in Portugal</Caption>
+      </ImageWithCaption>
+      <ImageWithCaption>
+        <Picture>
+          <source
+            srcSet={`
+              ${MangalSutraLegacy400} 400w, ${MangalSutraModern600} 600w, ${MangalSutraModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${MangalSutraLegacy400} 400w, ${MangalSutraModern600} 600w, ${MangalSutraModern800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`
+              ${MangalSutraModern400} 400w, ${MangalSutraLegacy600} 600w, ${MangalSutraLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
+            type="image/jpeg"
+          />
+          <source
+            srcSet={`
+              ${MangalSutraModern400} 400w, ${MangalSutraLegacy600} 600w, ${MangalSutraLegacy800} 800w
+            `}
+            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
+            type="image/jpeg"
+          />
+          <Image
+            src={MangalSutraLegacy400}
+            loading="lazy"
+            width="400"
+            alt="Piyushkumar Mehta performing a Hindu wedding ceremony"
+          />
+        </Picture>
+        <Caption>Mangal Sutra Ceremony</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
         <Picture>
@@ -173,79 +232,40 @@ export default function HomePageGallery() {
         <Picture>
           <source
             srcSet={`
-              ${KathaModern800} 800w
+              ${KrishanAneetaLegacy400} 400w, ${KrishanAneetaModern600} 600w, ${KrishanAneetaModern800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
             type="image/webp"
           />
           <source
             srcSet={`
-              ${KathaModern800} 800w
+              ${KrishanAneetaLegacy400} 400w, ${KrishanAneetaModern600} 600w, ${KrishanAneetaModern800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
             type="image/webp"
           />
           <source
             srcSet={`
-              ${KathaLegacy800} 800w
+              ${KrishanAneetaModern400} 400w, ${KrishanAneetaLegacy600} 600w, ${KrishanAneetaLegacy800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
             type="image/jpeg"
           />
           <source
             srcSet={`
-              ${KathaLegacy800} 800w
-            `}
-            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
-            type="image/jpeg"
-          />
-          <Image
-            src={KathaLegacy800}
-            loading="lazy"
-            width="800"
-            alt="Bhagwat Saptah - Florida"
-          />
-        </Picture>
-        <Caption>Bhagwat Saptah - Florida</Caption>
-      </ImageWithCaption>
-      <ImageWithCaption>
-        <Picture>
-          <source
-            srcSet={`
-              ${KathaSofaModern800} 800w
-            `}
-            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
-            type="image/webp"
-          />
-          <source
-            srcSet={`
-              ${KathaSofaModern800} 800w
-            `}
-            sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
-            type="image/webp"
-          />
-          <source
-            srcSet={`
-              ${KathaSofaLegacy800} 800w
-            `}
-            sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
-            type="image/jpeg"
-          />
-          <source
-            srcSet={`
-              ${KathaSofaLegacy800} 800w
+              ${KrishanAneetaModern400} 400w, ${KrishanAneetaLegacy600} 600w, ${KrishanAneetaLegacy800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
             type="image/jpeg"
           />
           <Image
-            src={KathaSofaLegacy800}
+            src={KrishanAneetaLegacy400}
             loading="lazy"
-            width="800"
-            alt="Piyushbhai Mehta in Coral Springs Florida"
+            width="400"
+            alt="With Krishan &amp; Aneeta"
           />
         </Picture>
-        <Caption>Bhagwat Saptah - Florida</Caption>
+        <Caption>Wedding With Krishan &amp; Aneeta</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
         <Picture>
@@ -290,40 +310,40 @@ export default function HomePageGallery() {
         <Picture>
           <source
             srcSet={`
-              ${SonamKapoorLegacy400} 400w, ${SonamKapoorModern600} 600w, ${SonamKapoorModern800} 800w
+              ${NehaRajanLegacy400} 400w, ${NehaRajanModern600} 600w, ${NehaRajanModern800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
             type="image/webp"
           />
           <source
             srcSet={`
-              ${SonamKapoorLegacy400} 400w, ${SonamKapoorModern600} 600w, ${SonamKapoorModern800} 800w
+              ${NehaRajanLegacy400} 400w, ${NehaRajanModern600} 600w, ${NehaRajanModern800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
             type="image/webp"
           />
           <source
             srcSet={`
-              ${SonamKapoorModern400} 400w, ${SonamKapoorLegacy600} 600w, ${SonamKapoorLegacy800} 800w
+              ${NehaRajanModern400} 400w, ${NehaRajanLegacy600} 600w, ${NehaRajanLegacy800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
             type="image/jpeg"
           />
           <source
             srcSet={`
-              ${SonamKapoorModern400} 400w, ${SonamKapoorLegacy600} 600w, ${SonamKapoorLegacy800} 800w
+              ${NehaRajanModern400} 400w, ${NehaRajanLegacy600} 600w, ${NehaRajanLegacy800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
             type="image/jpeg"
           />
           <Image
-            src={SonamKapoorLegacy400}
+            src={NehaRajanLegacy400}
             loading="lazy"
             width="400"
-            alt="Piyushbhai Mehta and family with Sonam Kapoor"
+            alt="Piyushkumar Mehta performing a Hindu wedding ceremony with Neha &amp; Rajan"
           />
         </Picture>
-        <Caption>With Sonam Kapoor</Caption>
+        <Caption>Wedding with Neha &amp; Rajan</Caption>
       </ImageWithCaption>
     </Section>
   );
