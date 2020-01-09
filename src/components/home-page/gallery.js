@@ -18,12 +18,12 @@ import MangalSutraLegacy800 from 'images/mangal-sutra-800w.jpg';
 import MangalSutraModern400 from 'images/mangal-sutra-400w.webp';
 import MangalSutraModern600 from 'images/mangal-sutra-600w.webp';
 import MangalSutraModern800 from 'images/mangal-sutra-800w.webp';
-import PortugalWeddingLegacy400 from 'images/portugal-wedding-400w.jpg';
-import PortugalWeddingLegacy600 from 'images/portugal-wedding-600w.jpg';
-import PortugalWeddingLegacy800 from 'images/portugal-wedding-800w.jpg';
-import PortugalWeddingModern400 from 'images/portugal-wedding-400w.webp';
-import PortugalWeddingModern600 from 'images/portugal-wedding-600w.webp';
-import PortugalWeddingModern800 from 'images/portugal-wedding-800w.webp';
+import FlorenceWeddingLegacy400 from 'images/florence-wedding-400w.jpg';
+import FlorenceWeddingLegacy600 from 'images/florence-wedding-600w.jpg';
+import FlorenceWeddingLegacy800 from 'images/florence-wedding-800w.jpg';
+import FlorenceWeddingModern400 from 'images/florence-wedding-400w.webp';
+import FlorenceWeddingModern600 from 'images/florence-wedding-600w.webp';
+import FlorenceWeddingModern800 from 'images/florence-wedding-800w.webp';
 import KrishanAneetaLegacy400 from 'images/krishan-and-aneeta-400w.jpg';
 import KrishanAneetaLegacy600 from 'images/krishan-and-aneeta-600w.jpg';
 import KrishanAneetaLegacy800 from 'images/krishan-and-aneeta-800w.jpg';
@@ -115,40 +115,40 @@ export default function HomePageGallery() {
         <Picture>
           <source
             srcSet={`
-              ${PortugalWeddingLegacy400} 400w, ${PortugalWeddingModern600} 600w, ${PortugalWeddingModern800} 800w
+              ${FlorenceWeddingLegacy400} 400w, ${FlorenceWeddingModern600} 600w, ${FlorenceWeddingModern800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
             type="image/webp"
           />
           <source
             srcSet={`
-              ${PortugalWeddingLegacy400} 400w, ${PortugalWeddingModern600} 600w, ${PortugalWeddingModern800} 800w
+              ${FlorenceWeddingLegacy400} 400w, ${FlorenceWeddingModern600} 600w, ${FlorenceWeddingModern800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
             type="image/webp"
           />
           <source
             srcSet={`
-              ${PortugalWeddingModern400} 400w, ${PortugalWeddingLegacy600} 600w, ${PortugalWeddingLegacy800} 800w
+              ${FlorenceWeddingModern400} 400w, ${FlorenceWeddingLegacy600} 600w, ${FlorenceWeddingLegacy800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_MD}) 50vw, 100vw`}
             type="image/jpeg"
           />
           <source
             srcSet={`
-              ${PortugalWeddingModern400} 400w, ${PortugalWeddingLegacy600} 600w, ${PortugalWeddingLegacy800} 800w
+              ${FlorenceWeddingModern400} 400w, ${FlorenceWeddingLegacy600} 600w, ${FlorenceWeddingLegacy800} 800w
             `}
             sizes={`(min-width: ${BREAKPOINT_LG}) 33.3vw, 100vw`}
             type="image/jpeg"
           />
           <Image
-            src={PortugalWeddingLegacy400}
+            src={FlorenceWeddingLegacy400}
             loading="lazy"
             width="400"
-            alt="Piyushkumar Mehta performing Hindu wedding ceremony in Portugal"
+            alt="Piyushkumar Mehta performing Hindu wedding ceremony in Florence, Italy"
           />
         </Picture>
-        <Caption>Wedding in Portugal</Caption>
+        <Caption>Wedding in Florence, Italy</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
         <Picture>
