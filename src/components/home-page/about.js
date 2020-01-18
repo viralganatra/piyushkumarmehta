@@ -227,7 +227,7 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
           />
           <Portrait
             src={PortraitLegacy600}
-            alt="Piyushkumar Mehta (Piyushbhai) doing Pranam - Hindu wedding priest"
+            alt="Piyushbhai Mehta doing Pranam - Hindu wedding priest"
           />
         </MainPicture>
         <MainText>
@@ -266,7 +266,7 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
               />
               <Portrait
                 src={HandHoldingLegacy600}
-                alt="Piyushkumar Mehta (Piyushbhai) doing Pranam - Hindu wedding priest"
+                alt="Piyushbhai Mehta performing Hindu wedding ceremony in London"
               />
             </RecitingPicture>
             <RecitingText>

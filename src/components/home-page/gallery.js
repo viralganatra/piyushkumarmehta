@@ -145,7 +145,7 @@ export default function HomePageGallery() {
             src={FlorenceWeddingLegacy400}
             loading="lazy"
             width="400"
-            alt="Piyushkumar Mehta performing Hindu wedding ceremony in Florence, Italy"
+            alt="Piyushbhai Mehta performing Hindu wedding ceremony in Florence, Italy"
           />
         </Picture>
         <Caption>Wedding in Florence, Italy</Caption>
@@ -184,7 +184,7 @@ export default function HomePageGallery() {
             src={MangalSutraLegacy400}
             loading="lazy"
             width="400"
-            alt="Piyushkumar Mehta performing a Hindu wedding ceremony"
+            alt="Piyushbhai Mehta performing a Hindu wedding ceremony"
           />
         </Picture>
         <Caption>Mangal Sutra Ceremony</Caption>
@@ -340,7 +340,7 @@ export default function HomePageGallery() {
             src={NehaRajanLegacy400}
             loading="lazy"
             width="400"
-            alt="Piyushkumar Mehta performing a Hindu wedding ceremony with Neha &amp; Rajan"
+            alt="Piyushbhai Mehta performing a Hindu wedding ceremony with Neha &amp; Rajan"
           />
         </Picture>
         <Caption>Wedding with Neha &amp; Rajan</Caption>

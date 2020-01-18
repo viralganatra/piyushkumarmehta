@@ -1,5 +1,5 @@
 <h1 align="center">
-  Piyushkumar Mehta Personal Website
+  Piyushbhai Mehta Personal Website
 </h1>
 
 This is the personal website for Piyushkumar Mehta. It is built with [React](http://react.com) and [Emotion](https://emotion.sh), using [Gatsby](https://www.gatsbyjs.org) as a static site generator. It is then deployed and served via [Netlify](https://www.netlify.com).

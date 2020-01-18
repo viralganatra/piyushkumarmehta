@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <Layout>
       <Helmet>
-        <title>Hindu Wedding Priest - Silent Ceremonies | Piyushkumar Mehta</title>
+        <title>Hindu Wedding Priest - Silent Ceremonies | Piyushbhai Mehta</title>
         <meta
           name="description"
           content="I am a Hindu wedding priest who performs silent ceremonies at intimate and grand scales. I recite in Sanskrit whilst explaining in English, Gujarati and Hindi."

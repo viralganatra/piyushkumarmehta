@@ -21,7 +21,9 @@ const borderBehindText = css`
 
   &::before,
   &::after {
+    background: none;
     border-top: 1px solid var(--color-bg);
+    bottom: auto;
     content: '';
     display: table-cell;
     position: relative;
@@ -59,13 +61,23 @@ const Masthead = styled.header`
 const Heading = styled.h1`
   color: var(--color-bg);
   font-weight: normal;
-  margin: 0;
+  line-height: normal;
+  margin: 0 0 15px 0;
   padding-bottom: 15px;
   padding-top: 50px;
+  position: relative;
   text-align: center;
+  ${responsiveFontSize('0.58rem')};
 
-  ${responsiveFontSize('0.58rem')}
-  ${borderBehindText};
+  &:after {
+    background-color: var(--color-bg);
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 20px;
+    position: absolute;
+    width: calc(100% - 40px);
+  }
 
   ${media.above('sm')`
     ${responsiveFontSize('1.1rem')}
@@ -73,26 +85,35 @@ const Heading = styled.h1`
   ${media.above('md')`
     ${responsiveFontSize('1.45rem')}
   `};
+  ${media.above('lg')`
+    ${borderBehindText};
+    margin-bottom: 0;
+  `};
   ${media.above('xxl')`
     font-size: ${px2rem(72)};
   `};
+
+  span {
+    display: block;
+  }
 `;
 
 const TagLine = styled.h2`
   ${responsiveFontSize('0.35rem')};
-
   color: var(--color-bg);
   font-weight: normal;
+  line-height: normal;
   margin: 0;
   text-align: center;
-
-  ${borderBehindText};
 
   ${media.above('sm')`
     ${responsiveFontSize('0.6rem')}
   `};
   ${media.above('md')`
     ${responsiveFontSize('0.7rem')};
+  `};
+  ${media.above('lg')`
+    ${borderBehindText};
   `};
   ${media.above('xxl')`
     font-size: ${px2rem(40)};
@@ -112,11 +133,14 @@ const HeroImage = styled.img`
 const Navigation = styled.nav`
   left: 0;
   position: absolute;
-  top: 85px;
+  top: calc((45px + 1vmin) + (45px + 1vmax));
   width: 100%;
 
   ${media.below('lg')`
     display: none;
+  `};
+  ${media.above('xxl')`
+    top: 125px;
   `};
 
   ul {
@@ -185,10 +209,12 @@ export default function HomePageIntro({ aboutSectionRef, contactSectionRef }) {
           />
           <HeroImage
             src={MainImageLegacy1200}
-            alt="Piyushkumar Mehta - Modern Hindu Wedding Priest (Piyushbhai)"
+            alt="Piyushbhai Mehta - Modern Hindu Wedding Priest"
           />
         </picture>
-        <Heading>Piyushkumar Mehta</Heading>
+        <Heading>
+          <span>Shree</span>Piyushbhai Mehta
+        </Heading>
         <TagLine>Hindu Wedding Priest</TagLine>
       </Masthead>
 
