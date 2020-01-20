@@ -16,7 +16,7 @@ export default function HomePage() {
         <title>Hindu Wedding Priest - Silent Ceremonies | Piyushbhai Mehta</title>
         <meta
           name="description"
-          content="I am a Hindu wedding priest who performs silent ceremonies at intimate and grand scales. I recite in Sanskrit whilst explaining in English, Gujarati and Hindi."
+          content="I am a Hindu wedding priest from London who performs silent ceremonies at intimate and grand scales. I recite in Sanskrit whilst explaining in English, Gujarati and Hindi."
         />
         <meta name="theme-color" content="#ffffff" />
         <link rel="apple-touch-icon" href="/favicon-192x192.png" />

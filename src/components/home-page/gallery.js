@@ -184,7 +184,7 @@ export default function HomePageGallery() {
             src={MangalSutraLegacy400}
             loading="lazy"
             width="400"
-            alt="Piyushbhai Mehta performing a Hindu wedding ceremony"
+            alt="Piyushbhai Mehta performing a Hindu wedding ceremony in London"
           />
         </Picture>
         <Caption>Mangal Sutra Ceremony</Caption>
@@ -223,7 +223,7 @@ export default function HomePageGallery() {
             src={SonamKapoorLegacy400}
             loading="lazy"
             width="400"
-            alt="Piyushbhai Mehta and family with Sonam Kapoor"
+            alt="Piyushbhai Mehta and family with Sonam Kapoor in London"
           />
         </Picture>
         <Caption>With Sonam Kapoor</Caption>
@@ -301,7 +301,7 @@ export default function HomePageGallery() {
             src={AnilKapoorLegacy400}
             loading="lazy"
             width="400"
-            alt="Piyushbhai Mehta and family with Anil Kapoor"
+            alt="Piyushbhai Mehta and family with Anil Kapoor in London"
           />
         </Picture>
         <Caption>Anil Kapoor's home after Laxmi Poojan</Caption>
