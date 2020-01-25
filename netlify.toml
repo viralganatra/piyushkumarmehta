@@ -8,4 +8,6 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Feature-Policy = "vibrate 'none'; geolocation 'none'; midi 'none'; notifications 'none'; push 'self'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'self'; payment 'none'"
 [build]
+  command = "yarn build"
+  publish = "public"
   Functions = "src/functions"
