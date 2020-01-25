@@ -2,6 +2,12 @@ const SparkPost = require('sparkpost');
 
 const client = new SparkPost(process.env.SPARKPOST);
 
+function getRecipients() {
+  return process.env.ADMIN_EMAIL.split(',').map((recipient) => ({
+    address: recipient.trim(),
+  }));
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
@@ -23,7 +29,7 @@ exports.handler = async (event) => {
           </html>
         `,
       },
-      recipients: [{ address: 'viral@viralganatra.com' }],
+      recipients: getRecipients(),
     });
 
     return {
