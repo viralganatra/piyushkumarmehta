@@ -228,6 +228,7 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
           <Portrait
             src={PortraitLegacy600}
             alt="Piyushbhai Mehta doing Pranam - Hindu wedding priest"
+            loading="lazy"
           />
         </MainPicture>
         <MainText>
@@ -267,6 +268,7 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
               <Portrait
                 src={HandHoldingLegacy600}
                 alt="Piyushbhai Mehta performing Hindu wedding ceremony in London"
+                loading="lazy"
               />
             </RecitingPicture>
             <RecitingText>
