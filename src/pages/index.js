@@ -21,6 +21,7 @@ export default function HomePage() {
         <meta name="theme-color" content="#ffffff" />
         <link rel="apple-touch-icon" href="/favicon-192x192.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </Helmet>
       <SectionIntro
         aboutSectionRef={aboutSectionRef}
