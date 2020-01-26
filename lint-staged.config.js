@@ -1,3 +1,3 @@
 module.exports = {
-  'src/**/*.+(js)': ['app-scripts format', 'git add'],
+  'src/**/*.+(js)': ['app-scripts format'],
 };
