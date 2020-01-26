@@ -6,9 +6,10 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "format": "app-scripts format",
     "start": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve -H 0.0.0.0",
+    "lint": "app-scripts lint",
     "postinstall": "netlify-lambda install"
   },
   "dependencies": {
