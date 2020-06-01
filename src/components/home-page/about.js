@@ -275,7 +275,7 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
               <p>
                 <RecitingEmphasisedText>The ceremony</RecitingEmphasisedText>I recite the
                 ceremony in both the sacred text of Sanskrit and the more commonly spoken
-                English, Gujarati and Hindi, I strive to communicate in such a way that
+                English, Gujarati and Hindi. I strive to communicate in such a way that
                 both you and your audience understand the significance and importance of
                 each stage of this traditional Hindu wedding ceremony.
               </p>
