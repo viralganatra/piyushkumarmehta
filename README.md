@@ -12,28 +12,25 @@ This is the personal website for Piyushkumar Mehta. It is built with [React](htt
     git clone https://github.com/viralganatra/piyushkumarmehta
     ```
 
-1. **Install the Yarn package manager.**
+1. **Copy the `.env.example` file and create a `.env` in the root:**
 
     ```sh
-    # e.g. via brew for Mac
-    brew install yarn
+    cp .env.example .env
     ```
 
-1. **Install the NPM packages.**
+1. **Build and start the app:**
 
-    Navigate into your new site's directory and run in the terminal
+    Run the make command in your terminal:
 
     ```sh
-    cd piyushkumarmehta && yarn install
+    make start
     ```
 
 1. **Start developing.**
 
     Your site is now running at `http://localhost:8000`!
 
-    ```sh
-    yarn start
-    ```
+> The Docker build can be slow, you can of course run this outside of docker; run `yarn && yarn start` and visit the url above.
 
 ## 🧐 Directory Structure
 
