@@ -1,0 +1,12 @@
+.cache
+.DS_Store
+.git
+.gitignore
+.vscode
+coverage
+docker-compose*
+Dockerfile
+node_modules
+.netlify
+public
+originals

@@ -30,7 +30,8 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
-    "eslint-import-resolver-alias": "^1.1.2"
+    "eslint-import-resolver-alias": "^1.1.2",
+    "gatsby-cli": "^2.12.40"
   },
   "husky": {
     "hooks": {
