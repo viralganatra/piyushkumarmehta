@@ -17,4 +17,15 @@ module.exports = {
       alias: Object.entries(aliases),
     },
   },
+
+  overrides: [
+    {
+      files: ['cypress/**/*.js'],
+      extends: ['plugin:cypress/recommended'],
+      rules: {
+        'no-param-reassign': ['error', { ignorePropertyModificationsFor: ['window'] }],
+        'no-underscore-dangle': ['error', { allow: ['_obj'] }],
+      },
+    },
+  ],
 };

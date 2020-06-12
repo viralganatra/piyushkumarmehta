@@ -10,7 +10,11 @@
     "start": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve -H 0.0.0.0",
     "lint": "app-scripts lint",
-    "postinstall": "netlify-lambda install"
+    "postinstall": "netlify-lambda install",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test 'GATSBY_GTAG_DEBUG=true yarn start' http://localhost:8000 'yarn cy:open'",
+    "test:e2e:ci": "start-server-and-test 'GATSBY_GTAG_DEBUG=true yarn start' http://localhost:8000 'yarn cy:run'"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -30,8 +34,13 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^6.0.0",
+    "cypress": "^4.7.0",
+    "dotenv-flow": "^3.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
-    "gatsby-cli": "^2.12.44"
+    "eslint-plugin-cypress": "^2.11.1",
+    "gatsby-cli": "^2.12.44",
+    "start-server-and-test": "^1.11.0"
   },
   "husky": {
     "hooks": {
