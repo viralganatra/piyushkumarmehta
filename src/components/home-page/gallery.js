@@ -112,7 +112,7 @@ export default function HomePageGallery() {
       <Heading>Photo Gallery</Heading>
 
       <ImageWithCaption>
-        <Picture>
+        <Picture data-testid="gallery-image">
           <source
             srcSet={`
               ${FlorenceWeddingLegacy400} 400w, ${FlorenceWeddingModern600} 600w, ${FlorenceWeddingModern800} 800w
@@ -151,7 +151,7 @@ export default function HomePageGallery() {
         <Caption>Wedding in Florence, Italy</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
-        <Picture>
+        <Picture data-testid="gallery-image">
           <source
             srcSet={`
               ${MangalSutraLegacy400} 400w, ${MangalSutraModern600} 600w, ${MangalSutraModern800} 800w
@@ -190,7 +190,7 @@ export default function HomePageGallery() {
         <Caption>Mangal Sutra Ceremony</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
-        <Picture>
+        <Picture data-testid="gallery-image">
           <source
             srcSet={`
               ${SonamKapoorLegacy400} 400w, ${SonamKapoorModern600} 600w, ${SonamKapoorModern800} 800w
@@ -229,7 +229,7 @@ export default function HomePageGallery() {
         <Caption>With Sonam Kapoor</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
-        <Picture>
+        <Picture data-testid="gallery-image">
           <source
             srcSet={`
               ${KrishanAneetaLegacy400} 400w, ${KrishanAneetaModern600} 600w, ${KrishanAneetaModern800} 800w
@@ -268,7 +268,7 @@ export default function HomePageGallery() {
         <Caption>Wedding With Krishan &amp; Aneeta</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
-        <Picture>
+        <Picture data-testid="gallery-image">
           <source
             srcSet={`
               ${AnilKapoorLegacy400} 400w, ${AnilKapoorModern600} 600w, ${AnilKapoorModern800} 800w
@@ -307,7 +307,7 @@ export default function HomePageGallery() {
         <Caption>Anil Kapoor's home after Laxmi Poojan</Caption>
       </ImageWithCaption>
       <ImageWithCaption>
-        <Picture>
+        <Picture data-testid="gallery-image">
           <source
             srcSet={`
               ${NehaRajanLegacy400} 400w, ${NehaRajanModern600} 600w, ${NehaRajanModern800} 800w
