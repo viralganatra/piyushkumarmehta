@@ -20,8 +20,6 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "@viralganatra/app-scripts": "^3.0.1",
-    "dotenv": "^8.2.0",
     "gatsby": "^2.23.1",
     "gatsby-plugin-emotion": "^4.3.3",
     "gatsby-plugin-force-file-loader": "^0.1.0",
@@ -36,6 +34,7 @@
   },
   "devDependencies": {
     "@testing-library/cypress": "^6.0.0",
+    "@viralganatra/app-scripts": "^3.0.1",
     "cypress": "^4.7.0",
     "dotenv-flow": "^3.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
