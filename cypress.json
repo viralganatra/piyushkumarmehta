@@ -1,5 +1,6 @@
 {
   "baseUrl": "http://localhost:8000",
   "projectId": "ochsud",
-  "fixturesFolder": false
+  "fixturesFolder": false,
+  "chromeWebSecurity": false
 }
