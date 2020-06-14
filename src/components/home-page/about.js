@@ -25,7 +25,7 @@ const ConstrainedLayout = styled.div`
   grid-template-columns: var(--gutter-section) 1fr 1fr var(--gutter-section);
 `;
 
-const Statement = styled.aside`
+const Statement = styled.div`
   background-color: white;
   font-family: var(--font-family-heading);
   grid-column: 2 / span 2;
@@ -190,7 +190,7 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
       <ConstrainedLayout>
         <Statement>
           <Heading>Personalised Hindu wedding ceremonies</Heading>
-          <Tagline>for your special day</Tagline>
+          <Tagline data-testid="tagline">for your special day</Tagline>
         </Statement>
 
         <LordGanesha viewBox="0 0 24 32">

@@ -35,7 +35,9 @@
   "devDependencies": {
     "@testing-library/cypress": "^6.0.0",
     "@viralganatra/app-scripts": "^3.0.1",
+    "axe-core": "^3.5.4",
     "cypress": "^4.8.0",
+    "cypress-axe": "^0.8.1",
     "dotenv-flow": "^3.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-cypress": "^2.11.1",
