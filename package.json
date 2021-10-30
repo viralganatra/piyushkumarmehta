@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@testing-library/cypress": "^8.0.1",
-    "@viralganatra/app-scripts": "^5.0.2",
+    "@viralganatra/app-scripts": "^5.0.3",
     "cypress": "^8.7.0",
     "cypress-axe": "^0.13.0",
     "dotenv-flow": "^3.2.0",
