@@ -23,15 +23,9 @@ export default function HTML(props) {
 
 HTML.propTypes = {
   htmlAttributes: PropTypes.shape(),
-  headComponents: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.array, PropTypes.element]),
-  ),
+  headComponents: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.array, PropTypes.element])),
   bodyAttributes: PropTypes.shape(),
-  preBodyComponents: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.array, PropTypes.element]),
-  ),
+  preBodyComponents: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.array, PropTypes.element])),
   body: PropTypes.string,
-  postBodyComponents: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.array, PropTypes.element]),
-  ),
+  postBodyComponents: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.array, PropTypes.element])),
 };
