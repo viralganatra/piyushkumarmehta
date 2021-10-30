@@ -3440,10 +3440,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/webpack-asset-relocator-loader/-/webpack-asset-relocator-loader-1.7.0.tgz#d3b707e0aba3111719f941dacb2408eff3c27319"
   integrity sha512-1Dy3BdOliDwxA7VZSIg55E1d/us2KvsCQOZV25fgufG//CsnZBGiSAL7qewTQf7YVHH0A9PHgzwMmKIZ8aFYVw==
 
-"@viralganatra/app-scripts@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@viralganatra/app-scripts/-/app-scripts-5.0.2.tgz#1c062c4d5e983a362e4aa58dbb210ad66b083160"
-  integrity sha512-RhVAbbsCuAVgICH5WVZlr7v4utkSY8B5roaTYM3Wxmrw5b4+MnwsSFqfw+waAndAS9BcYYLlfUEIPK6pXJTA2A==
+"@viralganatra/app-scripts@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@viralganatra/app-scripts/-/app-scripts-5.0.3.tgz#d13d694ef45c4bfe6aec2febf6782a6768aeeb1c"
+  integrity sha512-HcSMl1Q+Wu+ZM1k3wtRbaj3RjMd3+oyTSATENj72xfDhzfbhH8ZhtBtdn7f9bIkYSrZ2AJ3+zTZmbAC47grayw==
   dependencies:
     "@babel/core" "^7.14.5"
     "@babel/eslint-plugin" "^7.14.5"
