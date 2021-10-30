@@ -43,7 +43,7 @@ const fontStyles = css`
   text-transform: uppercase;
 `;
 
-const Section = styled.section`
+const Section = styled.div`
   ${fontStyles};
 `;
 

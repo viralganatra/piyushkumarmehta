@@ -234,16 +234,13 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
         <MainText>
           <EmphasisedText>Jai Shree Krishna,</EmphasisedText>
           <WelcomeText>
-            I&apos;m Piyushbhai Mehta and I perform Hindu wedding ceremonies at both
-            intimate and grand scales. I focus on creating a spiritual atmosphere through
-            silent ceremonies, ensuring that you are connected with the divine energy
-            whilst engaging your wedding guests and loved ones in your auspicious
-            ceremony.
+            I&apos;m Piyushbhai Mehta and I perform Hindu wedding ceremonies at both intimate and
+            grand scales. I focus on creating a spiritual atmosphere through silent ceremonies,
+            ensuring that you are connected with the divine energy whilst engaging your wedding
+            guests and loved ones in your auspicious ceremony.
           </WelcomeText>
 
-          <CallToAction onClick={() => scrollToRef(contactSectionRef)}>
-            Get in touch
-          </CallToAction>
+          <CallToAction onClick={() => scrollToRef(contactSectionRef)}>Get in touch</CallToAction>
         </MainText>
       </ConstrainedLayout>
 
@@ -273,22 +270,21 @@ const HomePageAbout = forwardRef(function HomePageAbout(props, ref) {
             </RecitingPicture>
             <RecitingText>
               <p>
-                <RecitingEmphasisedText>The ceremony</RecitingEmphasisedText>I recite the
-                ceremony in both the sacred text of Sanskrit and the more commonly spoken
-                English, Gujarati and Hindi. I strive to communicate in such a way that
-                both you and your audience understand the significance and importance of
-                each stage of this traditional Hindu wedding ceremony.
+                <RecitingEmphasisedText>The ceremony</RecitingEmphasisedText>I recite the ceremony
+                in both the sacred text of Sanskrit and the more commonly spoken English, Gujarati
+                and Hindi. I strive to communicate in such a way that both you and your audience
+                understand the significance and importance of each stage of this traditional Hindu
+                wedding ceremony.
               </p>
               <p>
-                Understanding that each couple and their respective families may have
-                certain requests, each ceremony is adapted according to your wishes.
+                Understanding that each couple and their respective families may have certain
+                requests, each ceremony is adapted according to your wishes.
               </p>
               <p>
-                Having performed Hindu wedding ceremonies across a range of destinations
-                within and outside of the UK, I adhere to maintain the values and
-                authenticity of such a revered ritual in a time-effective, organised and
-                devotional manner, ensuring it is a day that will remain forever in your
-                hearts.
+                Having performed Hindu wedding ceremonies across a range of destinations within and
+                outside of the UK, I adhere to maintain the values and authenticity of such a
+                revered ritual in a time-effective, organised and devotional manner, ensuring it is
+                a day that will remain forever in your hearts.
               </p>
             </RecitingText>
           </RecitingContent>
