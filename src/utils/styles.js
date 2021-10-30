@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { BREAKPOINT_XL } from 'constants/responsive';
 import { media } from './breakpoints';

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import MainImageLegacy1560 from 'images/bg-intro-faded-1560w.jpg';
 import MainImageLegacy1200 from 'images/bg-intro-faded-1200w.jpg';
@@ -237,7 +237,6 @@ export default function HomePageIntro({ aboutSectionRef, contactSectionRef }) {
 }
 
 HomePageIntro.propTypes = {
-  aboutSectionRef: PropTypes.PropTypes.shape({ current: PropTypes.elementType })
-    .isRequired,
+  aboutSectionRef: PropTypes.PropTypes.shape({ current: PropTypes.elementType }).isRequired,
   contactSectionRef: PropTypes.shape({ current: PropTypes.elementType }).isRequired,
 };
