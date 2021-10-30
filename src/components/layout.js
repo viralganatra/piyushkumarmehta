@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Global, css } from '@emotion/core';
+import { Global, css } from '@emotion/react';
 import TrajanProRegWoff2 from 'fonts/trajan-pro-regular.woff2';
 import TrajanProRegWoff from 'fonts/trajan-pro-regular.woff';
 import LibreBaskervilleWoff2 from 'fonts/libre-baskerville-regular.woff2';
@@ -73,8 +73,7 @@ export default function Layout({ children }) {
             font-family: 'TrajanPro';
             font-style: normal;
             font-weight: normal;
-            src: url(${TrajanProRegWoff2}) format('woff2'),
-              url(${TrajanProRegWoff}) format('woff');
+            src: url(${TrajanProRegWoff2}) format('woff2'), url(${TrajanProRegWoff}) format('woff');
           }
           @font-face {
             font-display: swap;
