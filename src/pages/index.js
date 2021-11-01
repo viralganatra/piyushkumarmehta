@@ -23,10 +23,7 @@ export default function HomePage() {
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </Helmet>
-      <SectionIntro
-        aboutSectionRef={aboutSectionRef}
-        contactSectionRef={contactSectionRef}
-      />
+      <SectionIntro aboutSectionRef={aboutSectionRef} contactSectionRef={contactSectionRef} />
       <main role="main">
         <SectionAbout ref={aboutSectionRef} contactSectionRef={contactSectionRef} />
         <SectionGallery />

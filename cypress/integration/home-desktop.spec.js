@@ -9,9 +9,7 @@ describe('Home page desktop view', () => {
   });
 
   it('should have the correct heading and title', () => {
-    cy.findByText((_, node) => node.textContent === 'ShreePiyushbhai Mehta').should(
-      'exist',
-    );
+    cy.findByText((_, node) => node.textContent === 'ShreePiyushbhai Mehta').should('exist');
 
     cy.findByText('Hindu Wedding Priest').should('exist');
   });
@@ -41,11 +39,7 @@ describe('Home page desktop view', () => {
   });
 
   it('should allow a user to contact via various methods', () => {
-    cy.findAllByText('+44 (0) 7960 723 171').should(
-      'have.attr',
-      'href',
-      'tel:+447960723171',
-    );
+    cy.findAllByText('+44 (0) 7960 723 171').should('have.attr', 'href', 'tel:+447960723171');
 
     cy.findAllByText('piyushbhaishastri@gmail.com').should(
       'have.attr',
