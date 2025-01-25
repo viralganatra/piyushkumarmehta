@@ -5,8 +5,7 @@ import TrajanProRegWoff2 from 'fonts/trajan-pro-regular.woff2';
 import TrajanProRegWoff from 'fonts/trajan-pro-regular.woff';
 import LibreBaskervilleWoff2 from 'fonts/libre-baskerville-regular.woff2';
 import LibreBaskervilleWoff from 'fonts/libre-baskerville-regular.woff';
-import BrandonWoff2 from 'fonts/brandon-regular.woff2';
-import BrandonWoff from 'fonts/brandon-regular.woff';
+import BellotaTextWoff2 from 'fonts/bellota-text-regular.woff2';
 import { px2rem } from 'utils/styles';
 import { media } from 'utils/breakpoints';
 import { normalize } from 'utils/normalize';
@@ -29,7 +28,7 @@ export default function Layout({ children }) {
             --reciting-picture-offset: 20px;
             --section-offset: 20px;
 
-            --font-family-base: Brandon, sans-serif;
+            --font-family-base: 'Bellota Text', sans-serif;
             --font-family-heading: 'Libre Baskerville', Georgia, Times, serif;
             --font-family-intro: 'TrajanPro', Georgia, Times, serif;
 
@@ -85,10 +84,10 @@ export default function Layout({ children }) {
           }
           @font-face {
             font-display: swap;
-            font-family: 'Brandon';
+            font-family: 'Bellota Text';
             font-style: normal;
             font-weight: normal;
-            src: url(${BrandonWoff2}) format('woff2'), url(${BrandonWoff}) format('woff');
+            src: url(${BellotaTextWoff2}) format('woff2');
           }
         `}
       />
