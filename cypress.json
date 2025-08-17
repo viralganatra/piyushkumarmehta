@@ -1,7 +1,0 @@
-{
-  "baseUrl": "http://localhost:8000",
-  "fixturesFolder": false,
-  "blockHosts": "www.google-analytics.com",
-  "projectId": "ochsud",
-  "chromeWebSecurity": false
-}

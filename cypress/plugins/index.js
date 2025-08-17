@@ -16,13 +16,13 @@ require('dotenv-flow').config();
 module.exports = (on, config) => {
   config.env = process.env;
 
-  on('before:browser:launch', (browser, launchOptions) => {
-    if (browser.family === 'chromium') {
-      launchOptions.args.push('--enable-logging', '--v=1');
-    }
+  // on('before:browser:launch', (browser, launchOptions) => {
+  //   if (browser.family === 'chromium') {
+  //     launchOptions.args.push('--enable-logging', '--v=1');
+  //   }
 
-    return launchOptions;
-  });
+  //   return launchOptions;
+  // });
 
   on('task', {
     log(message) {
