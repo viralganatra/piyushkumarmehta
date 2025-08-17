@@ -11,9 +11,9 @@
     for = "/vishnu-paath-uk-prayer-book.pdf"
     [headers.values]
       Content-Disposition = "attachment"
-    
+
 [build]
-  command = "yarn build"
+  command = "pnpm build"
   publish = "public"
   Functions = "src/functions"
 
