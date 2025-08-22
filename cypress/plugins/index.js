@@ -11,31 +11,31 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-require('dotenv-flow').config();
+// require('dotenv-flow').config();
 
-module.exports = (on, config) => {
-  config.env = process.env;
+// module.exports = (on, config) => {
+//   // config.env = process.env;
 
-  on('before:browser:launch', (browser, launchOptions) => {
-    if (browser.family === 'chromium') {
-      launchOptions.args.push('--enable-logging', '--v=1');
-    }
+//   // on('before:browser:launch', (browser, launchOptions) => {
+//   //   if (browser.family === 'chromium') {
+//   //     launchOptions.args.push('--enable-logging', '--v=1');
+//   //   }
 
-    return launchOptions;
-  });
+//   //   return launchOptions;
+//   // });
 
-  on('task', {
-    log(message) {
-      console.log(message);
+//   on('task', {
+//     log(message) {
+//       console.log(message);
 
-      return null;
-    },
-    table(message) {
-      console.table(message);
+//       return null;
+//     },
+//     table(message) {
+//       console.table(message);
 
-      return null;
-    },
-  });
+//       return null;
+//     },
+//   });
 
-  return config;
-};
+//   return config;
+// };
