@@ -80,11 +80,63 @@ const ContactListLink = styled.a`
 `;
 
 export const HomePageContact = forwardRef<HTMLElement>(function Contact(_props, ref) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    console.log(event);
+
+    const myForm = event.currentTarget;
+    const formData = new FormData(myForm);
+
+    const formBody = new URLSearchParams(formData as any).toString();
+
+    console.log(formBody);
+
+    await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formBody,
+    });
+  }
+
   return (
     <Section ref={ref}>
       <SectionHeading>Contact Me</SectionHeading>
 
       <Text>Let&apos;s work together to create your personalised Hindu wedding ceremony.</Text>
+
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        netlify-honeypot="custom-field"
+        onSubmit={handleSubmit}
+      >
+        <p className="hidden">
+          <label>
+            Leave well alone
+            <input name="custom-field" type="text" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Name: <input type="text" name="name" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Email: <input type="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message: <textarea name="message"></textarea>
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
 
       <ContactList>
         <ContactListItem>

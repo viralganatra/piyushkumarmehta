@@ -17,7 +17,8 @@
     "cy:run:record": "cypress run --record --key $(grep CYPRESS_RECORD_KEY .env | cut -d '=' -f2)",
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test 'GATSBY_GTAG_DEBUG=true yarn start' http://localhost:8000 'yarn cy:open'",
-    "test:e2e:ci": "start-server-and-test 'GATSBY_GTAG_DEBUG=true yarn start' http://localhost:8000 'yarn cy:run'"
+    "test:e2e:ci": "start-server-and-test 'GATSBY_GTAG_DEBUG=true yarn start' http://localhost:8000 'yarn cy:run'",
+    "netlify": "netlify"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -44,6 +45,7 @@
     "axe-core": "^4.10.3",
     "cypress": "^14.5.4",
     "cypress-axe": "^1.6.0",
+    "netlify-cli": "^23.3.0",
     "netlify-plugin-cypress": "^2.2.1",
     "typescript": "^5.3.3"
   }
