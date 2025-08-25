@@ -117,6 +117,7 @@ export const HomePageContact = forwardRef<HTMLElement>(function Contact(_props, 
             Leave well alone
             <input name="custom-field" type="text" />
           </label>
+          <input type="hidden" name="form-name" value="contact" />
         </p>
         <p>
           <label>
