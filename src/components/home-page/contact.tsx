@@ -192,9 +192,7 @@ export const HomePageContact = forwardRef<HTMLElement>(function Contact(_props, 
 
       myForm.reset();
 
-      const result = await res.text();
-      console.log({ result });
-      return result;
+      return await res.text();
     });
   }
 
@@ -222,26 +220,23 @@ export const HomePageContact = forwardRef<HTMLElement>(function Contact(_props, 
         </div>
         <FormSection>
           <FormText>Your Name *:</FormText>
-          {/* <FormInput type="text" name="name" autoComplete="name" required /> */}
-          <FormInput type="text" name="name" autoComplete="name" disabled={isPending} />
+          <FormInput type="text" name="name" autoComplete="name" disabled={isPending} required />
         </FormSection>
         <FormSection>
           <FormText>Your Email *:</FormText>
-          {/* <FormInput type="email" name="email" autoComplete="email" required /> */}
-          <FormInput type="email" name="email" autoComplete="email" />
+          <FormInput type="email" name="email" autoComplete="email" disabled={isPending} required />
         </FormSection>
         <FormSection>
           <FormText>Your Phone Number:</FormText>
-          <FormInput type="tel" name="phone" autoComplete="tel" />
+          <FormInput type="tel" name="phone" autoComplete="tel" disabled={isPending} />
         </FormSection>
         <FormSection>
           <FormText>Your Wedding Location:</FormText>
-          <FormInput type="text" name="location" />
+          <FormInput type="text" name="location" disabled={isPending} />
         </FormSection>
         <FormSection>
           <FormText>Message *:</FormText>
-          {/* <StyledFormTextarea name="message" required></StyledFormTextarea> */}
-          <StyledFormTextarea name="message"></StyledFormTextarea>
+          <StyledFormTextarea name="message" disabled={isPending} required></StyledFormTextarea>
         </FormSection>
 
         <FormMessages>
@@ -251,7 +246,7 @@ export const HomePageContact = forwardRef<HTMLElement>(function Contact(_props, 
             </Loader>
           ) : null}
 
-          {isIdle ? <StyledButton type="submit">Send</StyledButton> : null}
+          {isIdle || isError ? <StyledButton type="submit">Send</StyledButton> : null}
 
           {isError ? (
             <p>
