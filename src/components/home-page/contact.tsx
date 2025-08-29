@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 import { forwardRef } from 'react';
+import { Button } from '../../components/button';
 import { media } from '../../utils/breakpoints';
 import { px2rem, SectionHeading } from '../../utils/styles';
+import { useFormStatus } from '../../hooks/use-form-status';
 
 const Section = styled.section`
   background-color: var(--color-attention);
@@ -79,25 +81,127 @@ const ContactListLink = styled.a`
   }
 `;
 
+const ContactForm = styled.form`
+  display: grid;
+  gap: 0 10px;
+  margin: 30px 0;
+
+  ${media.above('md')`
+    justify-self: center;
+    grid-template-columns: max-content 500px;
+  `};
+`;
+
+const FormSection = styled.label`
+  display: grid;
+  gap: 0 10px;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  padding: 10px 0;
+`;
+
+const FormText = styled.span`
+  font-size: ${px2rem(20)};
+
+  ${media.above('md')`
+    text-align: right;
+  `};
+`;
+
+const FormInput = styled.input`
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid var(--color-text);
+  font-size: 16px;
+  height: 32px;
+  transition: background-color .2s ease;
+
+  &:disabled {
+    background-color: #ccc;
+  }
+  &:hover:not(:disabled) {
+    background-color: #f3edd0;
+  }
+  &:focus:not(:disabled) {
+    outline-color: #1976d2;
+  }
+`;
+
+const FormTextarea = styled(FormInput)`
+  min-height: 100px;
+  resize: vertical;
+`;
+
+const StyledFormTextarea = FormTextarea.withComponent('textarea');
+
+const StyledButton = styled(Button)`
+  background: var(--color-accent);
+  margin-top: 10px;
+
+  &:hover {
+    background-color: var(--color-attention-inverse);
+    color: var(--color-text);
+  }
+`;
+
+const Loader = styled.div`
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  grid-column: 2;
+  margin-top: 10px;
+`;
+
+const FormMessages = styled.div`
+  ${media.above('md')`
+    grid-column: 2;
+  `};
+`;
+
+const ContactFormThankYou = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  svg {
+    width: 48px;
+    fill: #fff;
+  }
+`;
+
 export const HomePageContact = forwardRef<HTMLElement>(function Contact(_props, ref) {
+  const { status, submitForm } = useFormStatus();
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    console.log(event);
-
     const myForm = event.currentTarget;
     const formData = new FormData(myForm);
-
     const formBody = new URLSearchParams(formData as any).toString();
 
-    console.log(formBody);
+    await submitForm(async () => {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formBody,
+      });
 
-    await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formBody,
+      if (!res.ok) {
+        throw new Error('Network error');
+      }
+
+      myForm.reset();
+
+      const result = await res.text();
+      console.log({ result });
+      return result;
     });
   }
+
+  const isIdle = status === 'idle';
+  const isPending = status === 'pending';
+  const isError = status === 'error';
+  const isSuccess = status === 'success';
 
   return (
     <Section ref={ref}>
@@ -105,39 +209,66 @@ export const HomePageContact = forwardRef<HTMLElement>(function Contact(_props, 
 
       <Text>Let&apos;s work together to create your personalised Hindu wedding ceremony.</Text>
 
-      <form
+      <ContactForm
         name="contact"
         method="post"
         data-netlify="true"
         netlify-honeypot="custom-field"
         onSubmit={handleSubmit}
       >
-        <p className="hidden">
-          <label>
-            Leave well alone
-            <input name="custom-field" type="text" />
-          </label>
+        <div className="hidden">
+          <FormInput name="custom-field" type="text" />
           <input type="hidden" name="form-name" value="contact" />
-        </p>
-        <p>
-          <label>
-            Your Name: <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="email" name="email" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message"></textarea>
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+        </div>
+        <FormSection>
+          <FormText>Your Name *:</FormText>
+          {/* <FormInput type="text" name="name" autoComplete="name" required /> */}
+          <FormInput type="text" name="name" autoComplete="name" disabled={isPending} />
+        </FormSection>
+        <FormSection>
+          <FormText>Your Email *:</FormText>
+          {/* <FormInput type="email" name="email" autoComplete="email" required /> */}
+          <FormInput type="email" name="email" autoComplete="email" />
+        </FormSection>
+        <FormSection>
+          <FormText>Your Phone Number:</FormText>
+          <FormInput type="tel" name="phone" autoComplete="tel" />
+        </FormSection>
+        <FormSection>
+          <FormText>Your Wedding Location:</FormText>
+          <FormInput type="text" name="location" />
+        </FormSection>
+        <FormSection>
+          <FormText>Message *:</FormText>
+          {/* <StyledFormTextarea name="message" required></StyledFormTextarea> */}
+          <StyledFormTextarea name="message"></StyledFormTextarea>
+        </FormSection>
+
+        <FormMessages>
+          {isPending ? (
+            <Loader>
+              <div className="loader"></div> Sending...
+            </Loader>
+          ) : null}
+
+          {isIdle ? <StyledButton type="submit">Send</StyledButton> : null}
+
+          {isError ? (
+            <p>
+              Sorry, something went wrong submitting the form. Please try again or contact me below:
+            </p>
+          ) : null}
+
+          {isSuccess ? (
+            <ContactFormThankYou>
+              <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"></path>
+              </svg>
+              <p>Thank you, I've recieved your details and I'll be in touch soon.</p>
+            </ContactFormThankYou>
+          ) : null}
+        </FormMessages>
+      </ContactForm>
 
       <ContactList>
         <ContactListItem>
