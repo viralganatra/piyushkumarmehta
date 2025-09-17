@@ -87,7 +87,7 @@ const ContactForm = styled.form`
   margin: 30px 0;
 
   ${media.above('md')`
-    justify-self: center;
+    justify-content: center;
     grid-template-columns: max-content 500px;
   `};
 `;
